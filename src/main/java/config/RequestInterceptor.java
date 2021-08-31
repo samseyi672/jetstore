@@ -14,7 +14,9 @@ public class RequestInterceptor implements HandlerInterceptor {
 
 	private static Logger logger =  LoggerFactory.getLogger(RequestInterceptor.class)  ;
 	
-	private static String PAGE_URL  = "http://localhost:1021/adminlogin" ;
+	//private static String PAGE_URL  = "http://localhost:1021/adminlogin" ;
+	
+	private static String PAGE_URL ="https://jetecommerce.herokuapp.com/adminlogin" ;
 	
 	//private static String PAGE_URL  = "https://jeteshop.herokuapp.com/adminlogin" ;
 	@Override
