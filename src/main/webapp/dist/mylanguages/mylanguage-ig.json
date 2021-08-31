@@ -1,0 +1,205 @@
+{
+ "title":"Crista Digital",
+  "language":{
+     "en":"en",
+     "es":"es",
+     "pt":"pt",
+     "de":"de",
+     "sw":"sw",
+     "yo":"Yoruba",
+     "ig":"ig",
+     "hs": "hs"
+  },
+  "notification":"Nkwupụta",
+  "medialn":{
+      "order":"Gị iji njikere maka Mbupu ..!",
+      "dwn":"Téléchargement complet",
+      "download":"Mbudata zuru ezu",
+      "files":"250 MB nke ahịhịa ahịhịa",
+      "file":"Faịlụ gị",
+      "all":"ha niile",
+      "notify":"Nkwupụta"
+  },
+  "profile":{
+   "change":"Gbanwee akara ngosi",
+   "user":"Dezie profaịlụ",
+   "inbox":"Igbe akwụkwọ ozi",
+   "settings":"Ntọala",
+   "logout":"pụọ"
+  },
+  "position":"Onye isi njikwa.",
+  "sidebar":{
+      "home":"Dashboard",
+      "products":"Productsfọdụ ngwaahịa",
+      "physical":"Nkịtị",
+      "category":"Atiya",
+      "subcategory":"Sub-Atiya",
+      "productlist":"Ndepụta ngwaahịa",
+      "productdetails":"Product Ihe",
+      "addproduct":"Tinye ngwaahịa",
+      "digital":"Dijitalụ",
+      "sales":"Ahịa",
+      "order":"Iwu",
+      "transactions":"Azụmahịa",
+      "coupon":"Kupọns",
+      "couponlist":"Ndepụta nke Kupọns",
+      "couponcreate":"Mepụta Kupọns",
+      "page":"Ibe akwukwo",
+      "pagelist":"Ndepụta peeji",
+      "pagecreate":"Mepụta ibe",
+      "media":"Mgbasa ozi",
+      "menus":"Ihe ngosi",
+      "menuslist":"Ndepụta menu",
+      "menuscreate":"Mepụta menu",
+      "user":"Ndị ọrụ",
+      "userlist":"ndepụta aha njirimara",
+      "usercreate":"Mepụta onye ọrụ",
+      "vendor":"Ndi umu nwanyi",
+      "vendorlist":"Ndepụta nke ndị na-eweta ngwaahịa",
+      "vendorcreate":"Mepụta soplaya",
+      "localization":"Ọnọdụ",
+      "translations":"Ntughari",
+      "currency":"Ọnụego mgbanwe",
+      "tax":"Tụ Isi",
+      "report":"Akụkọ",
+      "settings":"Ntọala",
+      "profile":"Profaịlụ",
+      "invoice":"Nchaji",
+      "login":"Banye"
+  },
+  "index":{
+   "panel":"Dashboard",  
+   "panel2":"Dashboard",
+   "earnings":"Nweta",
+   "thismonth":"Nke a na ọnwa",
+   "products":"Productsfọdụ ngwaahịa",
+   "message":"Ozi",
+   "vendor":"Ndị ọhụrụ na-ere ahịa",
+   "market":"Uru ahịa",
+   "order":"Iwu ikpeazụ" ,
+   "orderid":"nọmba ịtụ ahịa",
+   "ordertotal":"Total iji",
+   "orderpay":"Ụzọ nkwụnye ụgwọ",
+   "orderstatus":"Ọkwa",
+   "viewall":"Hụ Iwu niile",
+   "totalsales":"Ọnụ ahịa",
+   "lastmonth":"Ahịa ọnwa gara aga",
+   "monthpurchase":"Purchasezụta ọnwa",
+   "avg":"Nkezi oke nzụta",
+   "cash":"Mkpokọta azụmahịa azụmahịa",
+   "cashonhand":"Ego nkịtị",
+   "details":"Spedị nkọwa",
+   "deposits":"Nkwụnye ego kwa ụbọchị",
+   "security":"Nkwụnye ego nchekwa",
+   "buysell":"Acheter vendre",
+   "goodsreturn":"Buyzụta ere",
+   "detail":"Nkọwa",
+   "qty":"Onu Ego",
+   "statu":"Ọkwa",
+   "p":"Ahịa",
+   "emp":"ọrụ ọrụ",
+   "name":"Aha ikpeazụ",
+   "des":"Nhọrọ",
+   "skill":"Ikike ogo",
+   "exp":"Na-ebi ndụ",
+   "salesstatus":"Ọnọdụ Ahịa",
+   "orderbylocation":"Iwu site na ọnọdụ",
+   "salebylocation":"Ahịa site na ọnọdụ",
+   "monthrevenue":"Ego onwa gara aga"
+},
+"digital2":"Crista Digital nchịkwa nchịkwa"
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
