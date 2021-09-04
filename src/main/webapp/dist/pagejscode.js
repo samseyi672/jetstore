@@ -1,7 +1,7 @@
 //import {backendurl} from './ts_scripts/url'
 //const url  = 'http://localhost:1022' ; 
 const url  =     'https://cristabackend.herokuapp.com';
-//const api  = 'http://localhost:1022' ; 
+//const api = 'http://localhost:1022' ; 
 const api  =  'https://cristabackend.herokuapp.com';
 
 function showprd(id){

@@ -109,11 +109,13 @@ export const submitform  = (url:string,data:any,token:string|null,returntype:str
           //  var decoded = jwt_decode(response);	 
           //   console.log(decoded,'exp ',decoded['exp'] , 'sub ',decoded.sub);
              localStorage.setItem("token",response) ;
+             console.log(" response ",response) ;
           //   localStorage.setItem("userid",decoded.sub) ;
            // $(".form-button").empty().html(`<button id="login">Login</button>`);
           //  window.location.href="../adminindex" ;
           setTimeout(function() {
                $(".form-button").empty().html("<img src='./dist/images/btn-ajax-loader.gif'/> &nbsp; Signing In ...please wait ....");
+               console.log('redirecting ......');
                window.location.href="../adminindex" ;
                      },1500); 
                     },

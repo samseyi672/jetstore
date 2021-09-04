@@ -43,8 +43,8 @@ public class PageNavigationProcessingController {
 	private   RestTemplate restCaller  ;
 	//private final String jwtTokenURL ="http://localhost:1022/authenticate" ;
 	private final String jwtTokenURL  ="https://cristabackend.herokuapp.com/authenticate" ;
-	//private final String customerJwtTokenURL ="http://localhost:1022/authenticatecustomer" ;
-	private final String customerJwtTokenURL ="https://cristabackend.herokuapp.com/authenticatecustomer" ;
+	 //private final String customerJwtTokenURL ="http://localhost:1022/authenticatecustomer" ;
+    private final String customerJwtTokenURL ="https://cristabackend.herokuapp.com/authenticatecustomer" ;
 	   //@PostMapping("/login")
 	   @RequestMapping(value = "/login", method = RequestMethod.POST)
 	 public ResponseEntity<?> loginUsers(@Valid @RequestBody JwtRequest 

@@ -1245,6 +1245,7 @@ async function searchcollection(pagenum: any) {
       bodyimage.innerHTML = data;
     }
   });
+  
 }
 // load product search
 async function searchFiter2(pagenum: any) {
