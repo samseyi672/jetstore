@@ -20,9 +20,9 @@ import { register } from "./register";
 import { User } from "./user";
 import { product } from "./product";
 import { coupon } from './coupon';
-import { waterfall, series, each, asyncify, forEach, any } from 'async';
+//import { waterfall, series, each, asyncify, forEach, any } from 'async';
 import { createtables, createtables2 } from './tables'
-import { Search } from "gridjs/dist/src/view/plugin/search/search";
+//import { Search } from "gridjs/dist/src/view/plugin/search/search";
 toastr.options = {  // toast and notification
   "closeButton": true,
   "debug": false,
