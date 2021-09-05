@@ -1426,7 +1426,7 @@ const pageload = (url: string): void => {
   subscribetoevent(new EventSource(`${backendurl}/eventbyuser?userid=${localStorage.getItem('ack')}`), 'usernews');
   subscribetoevent(new EventSource(`${backendurl}/subscribe?vendorname=${localStorage.getItem('vendorname')}`),'vendornews');
   console.log("username ", localStorage.getItem('username'));
-  const myname = new String(localStorage.getItem('username')).toUpperCase();
+  const myname = (localStorage.getItem('username') as string).toUpperCase();
   switch (url) {
     case urlpages[0]: // for index page
       //alert('got here');
