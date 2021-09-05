@@ -1422,14 +1422,16 @@ const pageload = (url: string): void => {
   localStorage.setItem('ack', decoded.ack);
   localStorage.setItem('username', decoded.username);
   $('.mt-3').text(new String(localStorage.getItem('username')).toUpperCase());
+  console.log("username ", localStorage.getItem('username'));
   subscribetoevent(new EventSource(`${backendurl}/subscribe`), 'latestNews');
   subscribetoevent(new EventSource(`${backendurl}/eventbyuser?userid=${localStorage.getItem('ack')}`), 'usernews');
   subscribetoevent(new EventSource(`${backendurl}/subscribe?vendorname=${localStorage.getItem('vendorname')}`),'vendornews');
   switch (url) {
     case urlpages[0]: // for index page
-      alert('got here');
+      //alert('got here');
       invalidatetoken(tokenexp);
       const myname = new String(localStorage.getItem('username')).toUpperCase();
+      console.log('myname ',myname);
       $('.alert').prepend(`<strong>Welcome &nbsp;&nbsp;${myname}</strong>`);
       // document.querySelector("#thefooter")?.append(Headline()) ;  
       //for jsx testing which is working
