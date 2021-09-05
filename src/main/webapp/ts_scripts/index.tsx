@@ -1425,16 +1425,17 @@ const pageload = (url: string): void => {
   subscribetoevent(new EventSource(`${backendurl}/subscribe`), 'latestNews');
   subscribetoevent(new EventSource(`${backendurl}/eventbyuser?userid=${localStorage.getItem('ack')}`), 'usernews');
   subscribetoevent(new EventSource(`${backendurl}/subscribe?vendorname=${localStorage.getItem('vendorname')}`),'vendornews');
-  console.log("username ", localStorage.getItem('username'));
+  console.log("username2 ", localStorage.getItem('username'));
   const myname = (localStorage.getItem('username') as string).toUpperCase();
+  console.log('before switch myname ',myname);
   switch (url) {
     case urlpages[0]: // for index page
       //alert('got here');
-      console.log('myname ',myname);
+      console.log('myname ',myname," switch username ", localStorage.getItem('username'));
       invalidatetoken(tokenexp);
      // const myname = new String(localStorage.getItem('username')).toUpperCase();
       console.log('myname ',myname);
-      $('.alert').prepend(`<strong>Welcome &nbsp;&nbsp;${myname}</strong>`);
+      $('.alert').prepend(`<strong>Welcome &nbsp;&nbsp;${myname}me</strong>`);
       // document.querySelector("#thefooter")?.append(Headline()) ;  
       //for jsx testing which is working
       //subscribe to event for specific users

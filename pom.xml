@@ -80,11 +80,13 @@
 		 -->
 		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
           		
+       <!--     
         <dependency>
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-sql_2.12</artifactId>
 			<version>2.4.1</version>
 		</dependency> 
+		 -->
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
