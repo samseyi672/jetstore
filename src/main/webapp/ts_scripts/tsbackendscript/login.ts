@@ -17,7 +17,7 @@ export class login{
        console.log("username ",this.username,"password ",this.password);
      submitform(`${loginurl}/api/login`,{username:this.username,password:this.password},null,'text','post');//send form
         }
-        console.log('login completed');
+        console.log('login completed truly');
       }
 }
 

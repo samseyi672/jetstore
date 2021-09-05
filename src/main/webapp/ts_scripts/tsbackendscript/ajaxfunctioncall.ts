@@ -106,10 +106,9 @@ export const submitform  = (url:string,data:any,token:string|null,returntype:str
          success:function(response:any){
               //alert('creating response ') ;
            // console.log(response);
-          //  var decoded = jwt_decode(response);	 
           //   console.log(decoded,'exp ',decoded['exp'] , 'sub ',decoded.sub);
+          console.log(" response ",response) ;
              localStorage.setItem("token",response) ;
-             console.log(" response ",response) ;
           //   localStorage.setItem("userid",decoded.sub) ;
            // $(".form-button").empty().html(`<button id="login">Login</button>`);
           //  window.location.href="../adminindex" ;

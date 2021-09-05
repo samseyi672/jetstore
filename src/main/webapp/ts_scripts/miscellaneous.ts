@@ -5,8 +5,8 @@ declare var toastr: any;
     if (typeof exp !== 'undefined' && exp < now) {
       localStorage.removeItem("token");
       localStorage.removeItem('userid');
-      window.location.href="../adminlogin" ;
       console.log('after removing token');
+      window.location.href="../adminlogin" ;  
       throw new Error(`token expired`)
     }
    console.log('token valid ') ;
