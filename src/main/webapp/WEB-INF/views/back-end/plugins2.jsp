@@ -53,9 +53,10 @@
 <script  src="/dist/pagejscode.js"></script>
 <script  src="/dist/jquery.localize.min.js"></script>
 <script  src="/dist/jform.min.js"></script>
+<script  src="/dist/jquery-ui.js"></script>
 <script  src="/dist/alertify.min.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script> -->
-<script type="text/javascript" src="/dist/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script> -->
+<!-- <script type="text/javascript" src="/dist/select2.min.js"></script> -->
 <script type="text/javascript" src="/dist/index.bundle.js"></script>
 
 

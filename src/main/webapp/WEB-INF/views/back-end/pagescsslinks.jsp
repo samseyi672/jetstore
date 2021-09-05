@@ -49,9 +49,12 @@
 <link rel="stylesheet" href="/dist/mycss/toastr.min.css" />
 <link rel="stylesheet" href="/dist/mycss/jquery-ui.css" />
 <link rel="stylesheet" href="/dist/mycss/alertify.min.css" />
+<!-- <link rel="stylesheet" href="/dist/mycss/select2.min.css"
+	rel="stylesheet" /> -->
 <link rel="stylesheet" href="/dist/mycss/mermaid.min.css"
 	rel="stylesheet" />
-<!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js">
+</script>
 
 
 

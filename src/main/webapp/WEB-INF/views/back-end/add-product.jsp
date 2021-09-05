@@ -28,9 +28,7 @@
 
     App css
     <link rel="stylesheet" type="text/css" href="/assets/css/admin.css"> -->
-<jsp:include page="pagescsslinks.jsp" />
-<link rel="stylesheet" href="/dist/mycss/select2.min.css"
-	rel="stylesheet" />
+      <jsp:include page="pagescsslinks.jsp" />
 </head>
 <body>
 
@@ -722,6 +720,5 @@
 
 	<!-- latest jquery-->
 	<jsp:include page="plugins2.jsp" />
-	<script  src="/dist/jquery-ui.js"></script>
 </body>
 </html>
