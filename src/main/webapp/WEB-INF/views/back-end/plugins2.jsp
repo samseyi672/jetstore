@@ -1,4 +1,5 @@
-<script src="/assets/js/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- <script src="/assets/js/jquery-3.3.1.min.js"></script> -->
 
 <!-- Bootstrap js -->
 <script src="/assets/js/popper.min.js"></script>
@@ -55,8 +56,9 @@
 <script  src="/dist/jform.min.js"></script>
 <script  src="/dist/jquery-ui.js"></script>
 <script  src="/dist/alertify.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script> -->
 <!-- <script type="text/javascript" src="/dist/select2.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script type="text/javascript" src="/dist/index.bundle.js"></script>
 
 
