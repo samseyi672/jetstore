@@ -1411,13 +1411,13 @@ const pageload = (url: string): void => {
   }, 2000);
   //set local variables 
   let token = $.trim(localStorage.getItem("token"));
-   console.log("the token ",token);
+   //console.log("the token ",token);
   //alert(token);
   var decoded = jwt_decode(token);
- console.log(decoded, 'exp ', decoded['exp'], 'sub ', decoded.sub, 'vendorname ', decoded.vendorname, ' ack ', decoded.ack);
+ //console.log(decoded, 'exp ', decoded['exp'], 'sub ', decoded.sub, 'vendorname ', decoded.vendorname, ' ack ', decoded.ack);
   const now = Date.now().valueOf() / 1000;
   const tokenexp = parseInt(decoded.exp);
-  console.log(decoded.username);
+  //console.log(decoded.username);
   localStorage.setItem('vendorname', decoded.vendorname);
   localStorage.setItem('ack', decoded.ack);
   localStorage.setItem('username', decoded.username);
@@ -1427,7 +1427,7 @@ const pageload = (url: string): void => {
   subscribetoevent(new EventSource(`${backendurl}/subscribe?vendorname=${localStorage.getItem('vendorname')}`),'vendornews');
   switch (url) {
     case urlpages[0]: // for index page
-       alert('got here');
+      alert('got here');
       invalidatetoken(tokenexp);
       const myname = new String(localStorage.getItem('username')).toUpperCase();
       $('.alert').prepend(`<strong>Welcome &nbsp;&nbsp;${myname}</strong>`);

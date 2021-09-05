@@ -107,8 +107,8 @@ export const submitform = (url: string, data: any, token: string | null, returnt
                //alert('creating response ') ;
                // console.log(response);
                //   console.log(decoded,'exp ',decoded['exp'] , 'sub ',decoded.sub);
-               console.log(" response ", response);
-               alert(response);
+              // console.log(" response ", response);
+              // alert(response);
                localStorage.setItem("token", response);
                //   localStorage.setItem("userid",decoded.sub) ;
                // $(".form-button").empty().html(`<button id="login">Login</button>`);
