@@ -39,7 +39,7 @@
 <!-- Bootstrap css-->
 <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
 <!-- jsgrid css-->
-<link rel="stylesheet" type="text/css" href="https://jetecommerce.herokuapp.com/assets/css/jsgrid.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/jsgrid.css">
 
 <!-- App css-->
 <link rel="stylesheet" type="text/css" href="/assets/css/admin.css">
@@ -47,9 +47,9 @@
 <link rel="stylesheet" type="text/css" href="/dist/mycss/sweetalert2.min.css">
 
 <link rel="stylesheet" href="/dist/mycss/toastr.min.css" />
-<link rel="stylesheet" href="https://jetecommerce.herokuapp.com/dist/mycss/jquery-ui.css" />
+<link rel="stylesheet" href="/dist/mycss/jquery-ui.css" />
 <link rel="stylesheet" href="/dist/mycss/alertify.min.css" />
-<link rel="stylesheet" href="https://jetecommerce.herokuapp.com/dist/mycss/select2.min.css"
+<link rel="stylesheet" href="/dist/mycss/select2.min.css"
 	rel="stylesheet" />
 <link rel="stylesheet" href="/dist/mycss/mermaid.min.css"
 	rel="stylesheet" />
