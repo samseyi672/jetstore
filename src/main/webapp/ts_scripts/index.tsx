@@ -1430,6 +1430,7 @@ const pageload = (url: string): void => {
   switch (url) {
     case urlpages[0]: // for index page
       //alert('got here');
+      console.log('myname ',myname);
       invalidatetoken(tokenexp);
      // const myname = new String(localStorage.getItem('username')).toUpperCase();
       console.log('myname ',myname);
