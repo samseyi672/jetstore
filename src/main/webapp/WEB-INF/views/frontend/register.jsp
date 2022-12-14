@@ -660,17 +660,54 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-md-6">
+                                 <div class="col-md-6">
                                     <label for="email">email</label>
                                     <input type="text" class="form-control" name="email" id="email" placeholder="Email" required="">
+                                </div> 
+                                  <div class="col-md-6">
+                                    <label for="Country">Country</label>
+                                    <select id="country" name="country" class="form-control">
+                                        
+                                    </select>
                                 </div>
-                                <div class="col-md-6">
+                            </div>
+                            <div class="form-row">                                                         
+                                  <div class="col-md-6">
+                                    <label for="State">State</label>
+                                   <select id="state" name="state" class="form-control">
+                                        
+                                    </select>
+                                  </div>
+                                    <div class="col-md-6">
+                                    <label for="City">City</label>
+                                   <select id="city" name="city" class="form-control">
+                                    
+                                    </select>
+                                  </div>
+                                 </div>
+                            <br/>
+                                 <div class="form-row">
+                                  <div class="col-md-6">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone" required="">
+                                </div>
+                                  <div class="col-md-6">
                                     <label for="review">Password</label>
                                     <input type="password" name="password" class="form-control" id="review"
                                         placeholder="Enter your password" required="">
+                                </div>                                                        
+                                 </div>
+                            <div class="form-row">
+                                 <div class="col-md-6">
+                                    <label for="review">confirm Password</label>
+                                    <input type="password" name="confirmpassword" class="form-control" id="review"
+                                        placeholder="Confirm your password" required="">
                                 </div>
-                         <a href="javascript:void(0);" class="btn btn-solid" id="createaccount">create Account</a>
-                           
+                            </div>
+                            <div class="form-row">
+                               <div class="col-md-6">
+                      <a href="javascript:void(0);" class="btn btn-solid" id="createaccount">Create Account</a>
+                                </div>                                                        
                             </div>
                         </form>
                          <div id="error">

@@ -9,12 +9,13 @@ export interface order {
     price:string,
     productid:string,
     ordid:string,
+    request_order_id:string,
     shipping:boolean,
     localpickup:boolean,
     address:string,
     firstname:string,
     lastname:string,
-    paymentgroup:string,
+    paymentmethod:string,
     postalcode:string,
     //paymentmethod:string,
     total:string,
@@ -22,7 +23,8 @@ export interface order {
     phone:string,
     tax:string,
     overalltotal:string 
-    userid:string 
+    userid:string
+    vendorname:string 
 }
 
 export interface cartproduct{

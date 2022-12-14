@@ -41,575 +41,6 @@
 <body>
     <!-- header start -->
     
-<!--     
-        <header>
-        <div class="mobile-fix-option"></div>
-        <div class="top-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="header-contact">
-                            <ul>
-									<li>Welcome to CRISTA DIGITAL</li>
-										<li><i class="fa fa-phone" aria-hidden="true"></i>Call Us: 08086581822,08085863502</li>
-							</ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 text-right">
-                        <ul class="header-dropdown">
-                            <li class="mobile-wishlist"><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                            </li>
-                            <li class="onhover-dropdown mobile-account">
-                                <i class="fa fa-user" aria-hidden="true"></i> My Account
-                                <ul class="onhover-show-div">
-                                    <li>
-                                        <a href="#" data-lng="en">
-                                            Login
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" data-lng="es">
-                                            Logout
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="main-menu">
-                        <div class="menu-left">
-                            <div class="navbar">
-                                <a href="javascript:void(0)" onclick="openNav()">
-                                    <div class="bar-style"> <i class="fa fa-bars sidebar-bar" aria-hidden="true"></i>
-                                    </div>
-                                </a>
-                                <div id="mySidenav" class="sidenav">
-                                    <a href="javascript:void(0)" class="sidebar-overlay" onclick="closeNav()"></a>
-                                    <nav>
-                                        <div onclick="closeNav()">
-                                            <div class="sidebar-back text-left">
-                                                <i class="fa fa-angle-left pr-2" aria-hidden="true"></i> Back
-                                            </div>
-                                        </div>
-                                        Vertical Menu
-                                         <ul id="sub-menu" class="sm pixelstrap sm-vertical">
-                                            <li> <a href="category-page(computers).html">Computers</a>
-                                                <ul class="mega-menu clothing-menu">
-                                                    <li>
-                                                        <div class="row m-0">
-                                                            <div class="col-xl-4">
-                                                                <div class="link-section">
-                                                                    <h5>Hardware</h5>
-                                                                    <ul>
-                                                                        <li><a href="laptops.html">Laptops</a></li>
-                                                                        <li><a href="printers.html">Printers</a></li>
-                                                                        <li><a href="scanners.html">Scanners</a></li>
-                                                                        <li><a href="servers.html">Servers</a></li> 
-																		<li><a href="notebooks.html">Notebooks</a></li>
-																		<li><a href="ultrabooks.html">Ultrabooks</a></li>																		
-                                                                        <li><a href="monitors.html">Monitors</a></li>
-                                                                        <li><a href="hybridpcs.html">Hybrid PCS</a></li>
-                                                                        <li><a href="macbooks.html">Macbooks</a></li>																		
-																		<li><a href="ups.html">UPS</a></li>
-																		<li><a href="cpus.html">CPUs</a></li>
-																		<li><a href="desktop.html">Desktops</a></li>
-																		<li><a href="inkstc.html">Inks, Toners & Cartridges</a></li>
-																		<li><a href="screen_protectors.html">Screen Protectors</a></li>
-                                                                    </ul>
-                                                                    <h5>Networking</h5>
-                                                                    <ul>
-                                                                        <li><a href="modems.html">Modems</a></li>
-                                                                        <li><a href="routers.html">Routers</a></li>
-                                                                        <li><a href="switches.html">Switches</a></li>
-																		<li><a href="peripherals.html">Peripherals</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xl-4">
-                                                                <div class="link-section">
-                                                                    <h5>Software</h5>
-                                                                    <ul>
-                                                                        <li><a href="officenbusiness.html">Office and Business Software</a></li>
-                                                                        <li><a href="operatingsystems.html">Operating Systems</a></li>
-													                    <li><a href="otheros.html">Other OSs</a></li>
-                                                                        <li><a href="batteries.html">Batteries</a></li>
-													                    <li><a href="cables.html">Cables</a></li>
-													                    <li><a href="chargers_powerbanks.html">Charges,Power Banks</a></li>
-													                    <li><a href="android">Android Phones</a></li>
-													                    <li><a href="windows.html">Windows</a></li>
-													                    <li><a href="ios.html">iOS Phones</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xl-4">
-                                                                <a href="#" class="mega-menu-banner"><img
-                                                                        src="/assets/images/mega-menu/electronic/3.jpg"
-                                                                        alt="" class="img-fluid blur-up lazyload"></a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            
-                                            <li> <a href="category-page(phones).html">Phones</a>
-                                                <ul>
-                                                    <li><a href="smartphones.html">Smart Phones</a></li>
-                                                    
-                                                </ul>
-                                            </li>
-											<li><a href="category-page(appliances).html">Appliances</a>
-                                                            <ul>
-                                                                <li><a href="airconditioner.html">Air Conditioner & Cooler </a></li>
-                                                                <li><a href="fans.html">Fan</a></li>
-                                                                <li><a href="freezers.html">Freezer</a></li>
-                                                                <li><a href="washers.html">Washers & Dryers</a></li>
-                                                                <li><a href="refrigerators.html">Refrigerators</a></li>
-                                                                <li><a href="cookers.html">Cookers & Ovens</a></li>
-                                                                <li><a href="dispensers.html">Water Dispensers</a></li>
-																<li><a href="vaccum.html">Vaccum Cleaners</a></li>
-																<li><a href="blenders.html">Blenders,Juicers & Mixers</a></li>
-                                                                <li><a href="burners.html">Hot plates & Burners</a></li>
-                                                                <li><a href="irons.html">Irons & Steamers</a></li>
-                                                                <li><a href="mincers.html">Processors & Mincers</a></li>
-                                                                <li><a href="toasters.html">Toasters & Sandwich makers</a></li>
-                                                                <li><a href="fryers.html">Deep fryers  & Rice Cookers</a></li>
-																<li><a href="kettles.html">Electric Kettles</a></li>
-                                                                <li><a href="microwaves.html">Microwaves</a></li>
-                                                                <li><a href="pounders.html">Yam Pounders</a></li>
-                                                            </ul>
-                                                         </li>   
-                                                            
-                                            <li><a href="category-page(healthy).html">Healthy Living Products</a></li>
-                                            <li> <a href="category-page(accessories">Accessories</a>
-                                                <ul>
-                                                    <li><a href="cables.html">Cables</a></li>
-                                                    <li><a href="cases_covers.html">Cases & Covers</a></li>
-                                                    <li><a href="screen_protectors.html">Screen Protectors</a></li>
-													<li><a href="chargers_powerbanks.html">Chargers & Power Banks</a></li>
-                                                    <li><a href="earphones_headsets.html">Earphones & Headsets</a></li>
-                                                    <li><a href="smartwatches.html">Smartwatches & Bands</a></li>
-													<li><a href="peripherals.html">Computer Peripherals</a></li>
-                                                    <li><a href="bags.html">Bags,Cases,Covers & Sleeves</a></li>
-                                                    <li><a href="accessories.html">Desktops and Laptops Accessories</a></li>
-													<li><a href="storagedevices.html">Storage Devices</a></li>
-													<li><a href="cases_covers.html">Cases & Covers</a></li>
-                                                    <li><a href="holders_stands.html">Holders & Stands</a></li>
-                                                    <li><a href="other_accessories.html">Other Accessories</a></li>
-													<li><a href="inkstc.html">Inks,Toners & Cartridges</a></li>
-                                                    <li><a href="batteries.html">Batteries</a></li>
-                                                </ul>
-                                            </li>                                        
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="brand-logo">
-                                <a href="index.html"> <img src="/assets/images/icon/crista_logo.png"
-                                        class="img-fluid blur-up lazyload" alt=""></a>
-                            </div>
-                        </div>
-                         <div class="menu-right pull-right">
-                                <div>
-                                    <nav id="main-nav">
-                                        <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
-                                        Sample menu definition
-                                        <ul id="main-menu" class="sm pixelstrap sm-horizontal">
-                                            <li>
-                                                <div class="mobile-back text-right">Back<i
-                                                        class="fa fa-angle-right pl-2" aria-hidden="true"></i></div>
-                                            </li>
-                                            <li>
-                                            <a href="#">Home</a>
-                                            <ul>
-											<li>
-                                                    <a href="electronic-1.html">Crista  Digital</a>
-                                                    <ul>
-													   
-                                                        <li><a target="_blank" href="marketplace-demo.html">Marketplace</a></li>
-                                                        
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="category-page(computers).html">Computers</a>
-                                                    <ul>
-                                                       <li><a href="laptops.html">Laptops</a></li>
-                                                        <li><a href="printers.html">Printers</a></li>
-                                                        <li><a href="scanners.html">Scanners</a></li>
-                                                        <li><a href="servers.html">Servers</a></li> 
-														<li><a href="notebooks.html">Notebooks</a></li>
-														<li><a href="ultrabooks.html">Ultrabooks</a></li>																		
-                                                        <li><a href="monitors.html">Monitors</a></li>
-                                                        <li><a href="hybridpcs.html">Hybrid PCS</a></li>
-                                                        <li><a href="macbooks.html">Macbooks</a></li>																		
-														<li><a href="ups.html">UPS</a></li>
-														<li><a href="cpus.html">CPUs</a></li>
-														<li><a href="desktop.html">Desktops</a></li>
-														<li><a href="inkstc.html">Inks, Toners & Cartridges</a></li>
-														<li><a href="screen_protectors.html">Screen Protectors</a></li>
-														
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="category-page(phones).html">Phones</a>
-                                                    <ul>
-                                                    <li><a href="smartphones.html">Smart Phones</a></li>
-                                                    <li><a href="bags.html">Smart Watches</a></li>													                                        
-													<li><a href="batteries.html">Batteries</a></li>
-													<li><a href="cables.html">Cables</a></li>
-													<li><a href="chargers_powerbanks.html">Charges,Power Banks</a></li>
-													<li><a href="android.html">Android Phones</a></li>
-													<li><a href="ios.html">iOS Phones</a></li>
-                                                    </ul>
-                                                </li>
-												
-												<li>
-                                                    <a href="category-page(appliances).html">Home Appliances</a>
-                                                    <ul>
-                                                        <li><a href="airconditioner.html">Air Conditioner & Cooler </a></li>
-                                                        <li><a href="fans.html">Fans</a></li>
-                                                        <li><a href="freezers.html">Freezers</a></li>
-                                                        <li><a href="washers.html">Washers & Dryers</a></li>
-                                                        <li><a href="refrigerators.html">Refrigerators</a></li>
-                                                        <li><a href="cookers.html">Cookers & Ovens</a></li>
-                                                        <li><a href="dispensers.html">Water Dispensers</a></li>
-														<li><a href="vaccum.html">Vaccum Cleaners</a></li>
-														<li><a href="blenders.html">Blenders,Juicers & Mixers</a></li>
-                                                        <li><a href="burners.html">Hot plates & Burners</a></li>
-                                                        <li><a href="irons.html">Irons & Steamers</a></li>
-                                                        <li><a href="mincers.html">Processors & Mincers</a></li>
-                                                        <li><a href="toasters.html">Toasters & Sandwich makers</a></li>
-                                                        <li><a href="fryers.html">Deep fryers  & Rice Cookers</a></li>
-														<li><a href="kettles.html">Electric Kettles</a></li>
-                                                        <li><a href="microwaves.html">Microwaves</a></li>
-                                                        <li><a href="pounders.html">Yam Pounders</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a target="_blank" href="category-page(healthy).html">Healthy Living Products</a></li>       
-                                                <li><a target="_blank" href="category-page(accessories).html">Accessories</a></li>    												
-                                                                                                
-                                            </ul>
-                                        </li>
-                                        <li class="mega" id="hover-cls"><a href="#">Computers & Phones </a>
-                                                <ul class="mega-menu full-mega-menu">
-                                                    <li>
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col mega-box">
-                                                                    <div class="link-section">
-                                                                        <div class="menu-title">
-                                                                            <h5>Laptops</h5>
-                                                                        </div>
-                                                                        <div class="menu-content">
-                                                                            <ul>
-                                                                                <li><a href="laptops.html">Laptops & Netbooks</a></li>
-                                                                                <li><a href="notebooks.html">Notebooks</a></li>
-                                                                                <li><a href="ultrabooks.html">Ultrabooks</a></li>
-                                                                                <li><a href="hybridpcs.html">Hybrid PCs</a></li>
-                                                                                <li><a href="macbooks.html">Macbooks</a></li>                                                                                
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col mega-box">
-                                                                    <div class="link-section">
-                                                                        <div class="menu-title">
-                                                                            <h5>Desktops & Monitors</h5>
-                                                                        </div>
-                                                                        <div class="menu-content">
-                                                                            <ul>
-                                                                                <li><a href="monitors.html">Monitors</a></li>
-                                                                                <li><a href="cpus.html">CPUs</a></li>
-                                                                                <li><a href="ups.html">UPS</a></li>
-                                                                                <li><a href="desktopbundles.html">Desktop Bundles</a></li>                                                                                
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col mega-box">
-                                                                    <div class="link-section">
-                                                                        <div class="menu-title">
-                                                                            <h5>Accessories</h5>
-                                                                        </div>
-                                                                        <div class="menu-content">
-                                                                            <ul>
-                                                                                <li><a href="peripherals.html">Computer Peripherals</a></li>
-                                                                                <li><a href="bccs.html">Bags,Cases,Covers,etc</a></li>                                                                                
-                                                                                <li><a href="storagedevices.html">Storage Devices</a></li> 
-																				<li><a href="ldaccessories.html">Laptops & Desktops Accessories</a></li>
-                                                                                <li><a href="printers.html">Printers</a></li>
-                                                                                <li><a href="scanners.html">Scanners</a></li>
-                                                                                <li><a href="inkstc.html">Inks, Toners & Cartridges</a></li>
-                                                                                <li><a href="pcgames.html">PC Games & Accessories</a></li>
-                                                                                <li><a href="storagedevices.html">Storage Devices</a></li>   																				
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-																<div class="col mega-box">
-                                                                    <div class="link-section">
-                                                                        <div class="menu-title">
-                                                                            <h5>Hifi & Networking</h5>
-                                                                        </div>
-                                                                        <div class="menu-content">
-                                                                            <ul>
-                                                                                <li><a href="switches.html">Switches</a></li>
-                                                                                <li><a href="modems.html">Modems</a></li>
-                                                                                <li><a href="routers.html">Routers</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>	
-                                                                <div class="col mega-box">
-                                                                    <div class="link-section">
-                                                                        <div class="menu-title">
-                                                                            <h5>Phones & Accessories</h5>
-                                                                        </div>
-                                                                        <div class="menu-content">
-                                                                            <ul>
-                                                                                <li><a href="smartphones.html">Smart Phones</a></li>
-																				<li><a href="smartwatches.html">Smart Watches</a></li>																			
-																				<li><a href="batteries.html">Batteries</a></li>
-																				<li><a href="cables.html">Cables</a></li>
-																				<li><a href="chargers_powerbanks.html">Charges,Power Banks</a></li>
-																				<li><a href="android.html">Android Phones</a></li>
-																				<li><a href="ios.html">iOS Phones</a></li>
-																				<li><a href="cases_covers.html">Cases & Covers</a></li>
-																				<li><a href="screen_protectors.html">Screen Protectors</a></li>
-																				<li><a href="chargers_powerbanks.html">Chargers & Power Banks</a></li>
-																				<li><a href="earphones_headsets.html">Earphones & Headsets</a></li>									
-																				<li><a href="holders_stands.html">Holders & Stands</a></li>
-																				<li><a href ="batteries.html">Batteries</a></li>
-																			    <li><a href="other_accessories.html">Other Accessories</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>                                                                																															
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="mega" id="hover-cls"><a href="#">Appliances & Accessories</a>
-                                                <ul class="mega-menu full-mega-menu">
-                                                    <li>
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col mega-box">
-                                                                    <div class="link-section">
-                                                                        <div class="menu-title">
-                                                                            <h5>Televisions</h5>
-                                                                        </div>
-                                                                        <div class="menu-content">
-                                                                            <ul>
-                                                                                <li><a href="smart_tvs.html">Smart TVs</a></li>
-																				<li><a href="led_tvs.html">LED TVs</a></li>
-																				<li><a href="curvedtvs.html">Curved TVs</a></li>
-																				<li><a href="oledtvs.html">OLED TVs</a></li>
-																				<li><a href="plasmatvs.html">Plasma TVs</a></li>
-																				<li><a href="home_threatre.html">Home Threatre</a></li>
-																				<li><a href="hifi_systems.html">HiFi Systems</a></li>
-																				<li><a href="audiosystems.html">Audio Systems</a></li>
-																				<li><a href="mp3players.html">MP3 Players  &  Speakers</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col mega-box">
-                                                                    <div class="link-section">
-                                                                        <div class="menu-title">
-                                                                            <h5>Digital Cameras</h5>
-                                                                        </div>
-                                                                        <div class="menu-content">
-                                                                            <ul>
-                                                                                <li><a href="digitalcameras.html">Digital Cameras</a></li>
-                                                                                <li><a href="pslr.html">Professional& SLR Cameras</a></li>
-                                                                                <li><a href="camcoders.html">Camcoders & Video Cameras</a></li>
-                                                                                <li><a href="clenses.html">Camera Lenses & Accessories</a></li>
-                                                                                <li><a href="cctv.html">CCTV cameras</a></li>                                                                                
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col mega-box">
-                                                                    <div class="link-section">
-                                                                        <div class="menu-title">
-                                                                            <h5>Home Threatre & Audio Systems</h5>
-                                                                        </div>
-                                                                        <div class="menu-content">
-                                                                            <ul>
-                                                                                <li><a href="threatre.html">Home Threatre</a></li>
-                                                                                <li><a href="audiosystems.html">Audio Systems</a></li>
-                                                                                <li><a href="hifi_systems.html">Hifi Systems</a></li>                                                                                
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col mega-box">
-                                                                    <div class="link-section">
-                                                                        <div class="menu-title">
-                                                                            <h5>Accessories</h5>
-                                                                        </div>
-                                                                        <div class="menu-content">
-                                                                            <ul>
-                                                                                <li><a href="tv_audio.html">TV Audio</a></li>
-                                                                                <li><a href="headphones.html"> Head phones</a></li>
-                                                                                <li><a href="other_accessories.html">Other Accessories</a></li>                                                                                
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col mega-box">
-                                                                    <div class="link-section">
-                                                                        <div class="menu-title">
-                                                                            <h5>Appliances</h5>
-                                                                        </div>
-                                                                        <div class="menu-content">
-                                                                            <ul>
-                                                                                <li><a href="airconditioner.html">Air Conditioner & Cooler </a></li>
-																				<li><a href="fans.html">Fans</a></li>
-																				<li><a href="freezers.html">Freezer</a></li>
-																				<li><a href="washers.html">Washers & Dryers</a></li>
-                                                                                <li><a href="refrigerators.html">Refrigerators</a></li>
-                                                                                <li><a href="cookers.html">Cookers & Ovens</a></li>
-                                                                                <li><a href="dispensers.html">Water Dispensers</a></li>
-																				<li><a href="vaccum.html">Vaccum Cleaners</a></li>
-																				<li><a href="blenders.html">Blenders,Juicers & Mixers</a></li>
-																				<li><a href="burners.html">Hot plates & Burners</a></li>
-																				<li><a href="irons.html">Irons & Steamers</a></li>
-																				<li><a href="mincers.html">Processors & Mincers</a></li>
-																				<li><a href="toasters.html">Toasters & Sandwich makers</a></li>
-																				<li><a href="fryers.html">Deep fryers  & Rice Cookers</a></li>
-																				<li><a href="kettles.html">Electric Kettles</a></li>
-																				<li><a href="microwaves.html">Microwaves</a></li>
-																				<li><a href="pounders.html">Yam Pounders</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>                                            
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <div>
-                                    <div class="icon-nav">
-                                        <ul>
-                                            <li class="onhover-div mobile-search">
-                                                <div><img src="/assets/images/icon/search.png" onclick="openSearch()"
-                                                        class="img-fluid blur-up lazyload" alt=""> <i class="ti-search"
-                                                        onclick="openSearch()"></i></div>
-                                                <div id="search-overlay" class="search-overlay">
-                                                    <div><span class="closebtn" onclick="closeSearch()"
-                                                            title="Close Overlay">×</span>
-                                                        <div class="overlay-content">
-                                                            <div class="container">
-                                                                <div class="row">
-                                                                    <div class="col-xl-12">
-                                                                        <form>
-                                                                            <div class="form-group">
-                                                                                <input type="text" class="form-control"
-                                                                                    id="exampleInputPassword1"
-                                                                                    placeholder="Search a Product">
-                                                                            </div>
-                                                                            <button type="submit"
-                                                                                class="btn btn-primary"><i
-                                                                                    class="fa fa-search"></i></button>
-                                                                        </form>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="onhover-div mobile-setting">
-                                                <div><img src="/assets/images/icon/setting.png"
-                                                        class="img-fluid blur-up lazyload" alt=""> <i
-                                                        class="ti-settings"></i></div>
-                                                <div class="show-div setting">
-                                                    <h6>language</h6>
-                                                    <ul>
-                                                        <li><a href="#">english</a></li>
-                                                        <li><a href="#">french</a></li>
-                                                    </ul>
-                                                    <h6>currency</h6>
-                                                    <ul class="list-inline">
-                                                        <li><a href="#">naira</a></li>
-														<li><a href="#">euro</a></li>
-                                                        <li><a href="#">rupees</a></li>
-                                                        <li><a href="#">pound</a></li>
-                                                        <li><a href="#">dollar</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="onhover-div mobile-cart">
-                                                <div><img src="/assets/images/icon/cart.png"
-                                                        class="img-fluid blur-up lazyload" alt=""> <i
-                                                        class="ti-shopping-cart"></i></div>
-                                                <ul class="show-div shopping-cart">
-                                                    <li>
-                                                        <div class="media">
-                                                            <a href="#"><img class="mr-3"
-                                                                    src="/assets/images/electronics/pro/1.jpg"
-                                                                    alt="Generic placeholder image"></a>
-                                                            <div class="media-body">
-                                                                <a href="#">
-                                                                    <h4>item name</h4>
-                                                                </a>
-                                                                <h4><span>1 x $ 299.00</span></h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="close-circle"><a href="#"><i class="fa fa-times"
-                                                                    aria-hidden="true"></i></a></div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <a href="#"><img class="mr-3"
-                                                                    src="/assets/images/electronics/pro/7.jpg"
-                                                                    alt="Generic placeholder image"></a>
-                                                            <div class="media-body">
-                                                                <a href="#">
-                                                                    <h4>item name</h4>
-                                                                </a>
-                                                                <h4><span>1 x $ 299.00</span></h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="close-circle"><a href="#"><i class="fa fa-times"
-                                                                    aria-hidden="true"></i></a></div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="total">
-                                                            <h5>subtotal : <span>$299.00</span></h5>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="buttons"><a href="cart.html" class="view-cart">view
-                                                                cart</a> <a href="#" class="checkout">checkout</a></div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header> 
-    -->
-    
     <!-- header end -->
     
  <jsp:include page="header.jsp" />
@@ -651,48 +82,42 @@
                                 <div class="row check-out">
                                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                         <div class="field-label">First Name</div>
-                                        <input type="text" name="firstname" value="" placeholder="">
+                                        <input type="text" name="firstname" value="" placeholder="" required="true">
                                     </div>
                                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                         <div class="field-label">Last Name</div>
-                                        <input type="text" name="lastname" value="" placeholder="last name">
+                                        <input type="text" name="lastname" value="" placeholder="last name" required="true"/>
                                     </div>
                                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                         <div class="field-label">Phone</div>
-                                        <input type="text" name="phone" value="" placeholder="phone">
+                                        <input type="text" name="phone" value="" placeholder="phone" required="true" />
                                     </div>
                                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                         <div class="field-label">Email Address</div>
-                                        <input type="text" name="email" value="" placeholder="email">
+                                        <input type="text" name="email" value="" placeholder="email" required="true" />
                                     </div>
                                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                         <div class="field-label">Country</div>
-                                        <select name="country">
-										    <option>Nigeria</option>
-											<option>Ghana</option>
-											<option>Liberia</option>
-											<option>UAE</option>
-                                            <option>India</option>
-                                            <option>South Africa</option>
-                                            <option>United State</option>
-                                            <option>Australia</option>
+                                        <select id="country" name="country" required="true">
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                        <div class="field-label">Address</div>
-                                        <input type="text" name="address" value="" placeholder="Street address">
+                                   <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                        <div class="field-label">State</div>
+<!--                                        <input type="text" name="state" value="" placeholder="State">-->
+                                        <select id="state" name="state"  placeholder="State" required="true">
+                                            
+                                        </select>
                                     </div>
-                                  <!--    <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                        <div class="field-label">Email</div>
-                                        <input type="email" name="field-name" value="" placeholder="Email">
-                                    </div> -->
-                                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                         <div class="field-label">Town/City</div>
-                                        <input type="text" name="town" value="" placeholder="Town/city">
-                                    </div>
-                                    <div class="form-group col-md-12 col-sm-6 col-xs-12">
-                                        <div class="field-label">State / County</div>
-                                        <input type="text" name="state" value="" placeholder="State/County">
+<!--                                        <input type="text" name="town" value="" placeholder="Town/city">-->
+                                       <select id="city" name="town" placeholder="City/Town" required="true">
+                                            
+                                        </select>
+                                     </div>
+                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                        <div class="field-label">Address</div>
+                                        <input type="text" name="address" value="" placeholder="Street address" required="true" />
                                     </div>
                                   <!--    
                                    <div class="form-group col-md-12 col-sm-6 col-xs-12">
@@ -702,7 +127,7 @@
                                      -->
                                     <div class="form-group col-md-12 col-sm-6 col-xs-12">
                                         <div class="field-label">Postal Code</div>
-                                        <input type="text" name="postalcode" value="" placeholder="Postal code">
+                                        <input type="text" name="postalcode" value="" placeholder="Postal code" required="true" />
                                     </div>
                                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <input type="checkbox" name="shipping-option" id="account-option">
@@ -740,8 +165,8 @@
                                         <!--   <th style="display:none;"><strong>productid</strong></th> -->
                                           </thead>
                                           <tbody id="cartcheckout">
-                                          <tr><td>Pink Slim Shirt</td><td>1</td><td><span>$25.10</span></td><td><span>$25.10</span><td><td>5%</td></tr>
-                                          <tr><td>SLim Fit Jeans</td><td>1</td><td><span>$555.00</span></td><td><span>$25.10</span><td><td>5%</td></tr>                           
+<!--                                          <tr><td>Pink Slim Shirt</td><td>1</td><td><span>$25.10</span></td><td><span>$25.10</span><td><td>5%</td></tr>
+                                          <tr><td>SLim Fit Jeans</td><td>1</td><td><span>$555.00</span></td><td><span>$25.10</span><td><td>5%</td></tr>                           -->
                                           </tbody>
                                         </table>
                                         </div>
@@ -750,18 +175,19 @@
                                             <li>Shipping
                                                 <div class="shipping">
                                                     <div class="shopping-option">
-                                                        <input type="checkbox" name="shipping" id="free-shipping">
+                                                        <input type="radio" name="trnasportertype" id="free-shipping">
                                                         <label for="free-shipping">Shipping</label>
                                                     </div>
                                                     <div class="shopping-option">
-                                                        <input type="checkbox" name="localpickup" id="local-pickup">
+                                                        <input type="radio"  name="trnasportertype" id="local-pickup">
+<!--                                                         <input type="checkbox"  name="localpickup" id="local-pickup">-->
                                                         <label for="local-pickup">Local Pickup</label>
                                                     </div>
                                                 </div>
                                             </li>
                                         </ul>
                                         <ul class="total">
-                                            <li>Total <span class="count" id="total">620.00</span></li>
+                                            <li>Total <span class="count" id="total">00.00</span></li>
                                         </ul>
                                     </div>
                                     <div class="payment-box">
@@ -790,13 +216,13 @@
                                                     <li>
                                                         <div class="radio-option">
                                                             <input type="radio" name="paymentgroup" id="payment-2" value="cashondelivery">
-                                                            <label for="payment-2">Cash On Delivery<span
+                                                            <label for="payment-2">Pay On Delivery<span
                                                                     class="small-text">Please send a check to Store
                                                                     Name, Store Street, Store Town, Store State /
                                                                     County, Store Postcode.</span></label>
                                                         </div>
                                                     </li>
-                                                    <li>
+<!--                                                    <li>
                                                         <div class="radio-option">
                                                             <input type="radio" name="paymentgroup"
                                                                 id="payment-3" value="mastercard">
@@ -809,27 +235,29 @@
                                                                id="payment-4" value="visacard">
                                                             <label for="payment-4">Visa Card</label>
                                                         </div>
-                                                    </li>
+                                                    </li>-->
                                                      <li>
                                                         <div class="radio-option">
                                                             <input type="radio" name="paymentgroup"
                                                                 id="payment-5" value="vervecard">
-                                                            <label for="payment-5">Verve Card</label>
+                                                            <label for="payment-5">Pay(Debit Card)</label>
                                                         </div>
                                                     </li>
-                                                    <li>
+<!--                                                    <li>
                                                         <div class="radio-option paypal">
                                                             <input type="radio" name="paymentgroup" id="payment-6" value="paypal">
-                                                            <label for="payment-6">PayPal<span class="image">
-                                                          <!--   <img src="/assets/images/paypal.png" alt=""></span></label> -->
+                                                           <label for="payment-6">Pay with Account
+                                                               <span class="image">
+                                                            <img src="/assets/images/paypal.png" alt=""></span>
+                                                            </label> 
                                                         </div>
-                                                    </li>
+                                                    </li>-->
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="text-right">
                                          <a href="javascript:void(0);"  
-                                        id="clearorder" class="btn-solid btn" onclick="(()=>{document.getElementById('regform').reset();})()">Clear Order</a>
+                                        id="clearorder" class="btn-solid btn" onclick="(()=>{if(confirm('Do you want to clear the form')){document.getElementById('regform').reset();}})()">Clear Order</a>
                                         &nbsp;&nbsp;
                                         <a href="javascript:void(0);"  
                                         id="createbilling" class="btn-solid btn">Place Order</a>

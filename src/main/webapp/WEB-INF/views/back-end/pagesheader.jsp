@@ -45,12 +45,22 @@
 								class="flag-icon flag-icon-ng"></i>Hausa</a></li>
 					</ul></li>
 				<li class="onhover-dropdown"><i data-feather="bell"></i><span
-					class="badge badge-pill badge-primary pull-right notification-badge">3</span><span
+					class="badge badge-pill badge-primary pull-right notification-badge" id="ordercounter">0</span><span
 					class="dot"></span>
 					<ul class="notification-dropdown onhover-show-div p-0">
-						<li data-localize="notification" title="view messages">Notification <span
-							class="badge badge-pill badge-primary pull-right">3</span></li>
+<!--						<li data-localize="notification" title="view messages">Notification <span
+							class="badge badge-pill badge-primary pull-right" id="notificationmgr">0</span></li>-->
 						<li>
+<!--                                                    <div class="media">
+								<div class="media-body">
+									<h6 class="mt-0" data-localize="medialn.order">
+										<span><i class="shopping-color"
+											data-feather="shopping-bag"></i>
+											</span>
+									</h6>
+									<p class="mb-0">.</p>
+								</div>
+							</div>-->
 							<div class="media">
 								<div class="media-body">
 									<h6 class="mt-0" data-localize="medialn.order">
@@ -119,6 +129,11 @@
 								data-feather="settings"></i>Settings</a></li>
 						<li><a id="logoutme" href="javascript:void(0);" data-localize="profile.logout"><i
 								data-feather="log-out"></i>Logout</a></li>
+                   
+<!--                                          <audio controls>
+                                              <source src="/dist/images/mixkit-positive-interface-beep-221.wav" type="audio/wav">
+                                              Your browser does not support the <code>audio</code> tag.
+                                          </audio>-->
 					</ul>
 				</li>
 			</ul>

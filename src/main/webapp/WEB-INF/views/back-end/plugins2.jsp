@@ -1,6 +1,5 @@
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- <script src="/assets/js/jquery-3.3.1.min.js"></script> -->
-
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+ <script src="/assets/js/jquery-3.3.1.min.js"></script>
 <!-- Bootstrap js -->
 <script src="/assets/js/popper.min.js"></script>
 <script src="/assets/js/bootstrap.js"></script>
@@ -49,6 +48,10 @@
 <script src="/assets/js/admin-script.js"></script>
 <script src="/dist/jquery.formautofill.min.js"></script>
 <script  src="/dist/toastr.min.js"></script>
+ <!-- translate js -->
+<!-- <script src="/dist/translate.min.js"> </script> -->
+<script src="https://cdn.jsdelivr.net/npm/google-translate-api-extended@2.3.1/languages.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/google-translate-api-extended@2.3.1/index.min.js"></script>
 <script  src="/dist/sweetalert2.all.min.js"></script>
 <script  src="/dist/jwt-decode.js"></script>
 <script  src="/dist/pagejscode.js"></script>
@@ -57,8 +60,13 @@
 <script  src="/dist/jquery-ui.js"></script>
 <script  src="/dist/alertify.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script> -->
-<!-- <script type="text/javascript" src="/dist/select2.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+ <script type="text/javascript" src="/dist/select2.min.js"></script> 
+ <script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=vwefo40o"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
 <script type="text/javascript" src="/dist/index.bundle.js"></script>
 
 

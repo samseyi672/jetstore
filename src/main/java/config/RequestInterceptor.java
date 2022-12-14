@@ -6,17 +6,20 @@ import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
+@Component
 public class RequestInterceptor implements HandlerInterceptor {
 
 	private static Logger logger =  LoggerFactory.getLogger(RequestInterceptor.class)  ;
+
+	@Value("{page.adminlogin}")
+	private static String PAGE_URL ;
 	
-	//private static String PAGE_URL  = "http://localhost:1021/adminlogin" ;
-	
-	private static String PAGE_URL ="https://jetecommerce.herokuapp.com/adminlogin" ;
+	//private static String PAGE_URL ="https://jetecommerce.herokuapp.com/adminlogin" ;
 	
 	//private static String PAGE_URL  = "https://jeteshop.herokuapp.com/adminlogin" ;
 	@Override
@@ -32,14 +35,14 @@ public class RequestInterceptor implements HandlerInterceptor {
 		  if(url.equalsIgnoreCase(RequestInterceptor.PAGE_URL)){
 			//response.sendRedirect("/adminindex");
 			System.out.println("inside login  page");
-		    } 
-		      if(!url.equalsIgnoreCase(RequestInterceptor.PAGE_URL)){
+		       } 
+		  if(!url.equalsIgnoreCase(RequestInterceptor.PAGE_URL)){
 			 if(session.getAttribute("accessed")==null) {
 			    flag  = false ;
-			    System.out.println("redirecting .......you have no session ......");
-			    response.sendRedirect("/adminlogin"); 
+			    System.out.println("redirecting .......you have no session ......"+flag);
+			    response.sendRedirect("/adminlogin");
 			     return flag ;
-			      } 
+			       } 
 		            }
 		 return  flag  ;
 	}

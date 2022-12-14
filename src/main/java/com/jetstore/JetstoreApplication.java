@@ -13,10 +13,10 @@ public class JetstoreApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(JetstoreApplication.class,args);
-	}
+	   }
 	
-	//this is an interceptor bean 	
-	 @Bean
+	  //this is an interceptor bean 	
+	  @Bean
 	public MappedInterceptor localeInterceptor(){
 	return new MappedInterceptor(null,new String[]{"/jetresources/**",
 		"/dist/**","/assets/**","/api/**","/jetcart/**"},new RequestInterceptor());

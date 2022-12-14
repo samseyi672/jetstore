@@ -387,10 +387,10 @@ Theme css
                         <div class="col-md-4">
                             <a href="#">
                                 <div class="collection-banner">
-                                    <div class="img-part">
+<!--                                    <div class="img-part">
                                         <img src="/assets/images/electronics/sub1.jpg"
                                             class="img-fluid blur-up lazyload bg-img" alt="">
-                                    </div>
+                                    </div>-->
                                     <div class="contain-banner banner-3">
                                         <div>
                                             <!--<h4>10% off</h4>
@@ -403,10 +403,10 @@ Theme css
                         <div class="col-md-4">
                             <a href="#">
                                 <div class="collection-banner">
-                                    <div class="img-part">
+<!--                                    <div class="img-part">
                                         <img src="/assets/images/electronics/sub2.jpg"
                                             class="img-fluid blur-up lazyload bg-img" alt="">
-                                    </div>
+                                    </div>-->
                                     <div class="contain-banner banner-3">
                                         <div>
                                             <!--<h4>10% off</h4>
@@ -419,10 +419,10 @@ Theme css
                         <div class="col-md-4">
                             <a href="#">
                                 <div class="collection-banner">
-                                    <div class="img-part">
+<!--                                    <div class="img-part">
                                         <img src="/assets/images/electronics/sub3.jpg"
                                             class="img-fluid blur-up lazyload bg-img" alt="">
-                                    </div>
+                                    </div>-->
                                     <div class="contain-banner banner-3">
                                         <div>
                                            <!-- <h4>50% off</h4>

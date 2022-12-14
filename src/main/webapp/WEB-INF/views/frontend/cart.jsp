@@ -641,7 +641,8 @@
         <div class="container">
             <div class="row" >
                 <div class="col-sm-12" id="customercart">
-                    <table class="table cart-table table-responsive-xs">
+<!--                    tables to show cart-->
+<!--                    <table class="table cart-table table-responsive-xs">
                         <thead>
                             <tr class="table-head">
                                 <th scope="col">image</th>
@@ -777,7 +778,7 @@
                                 </td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table>-->
                  <!--    <table class="table cart-table table-responsive-md">
                         <tfoot>
                             <tr>
@@ -1008,6 +1009,7 @@
             document.getElementById("search-overlay").style.display = "none";
         }
     </script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/voca/1.4.0/voca.min.js"></script>-->
     <jsp:include page="frontendplugin.jsp" />   
 </body>
 

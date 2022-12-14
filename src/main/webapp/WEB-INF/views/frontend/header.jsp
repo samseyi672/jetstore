@@ -24,8 +24,9 @@
 							class="fa fa-user" aria-hidden="true"></i> My Account
 							<ul class="onhover-show-div">
 								<li><a href="javascript:void(0);" id="customerlogin">Login</a></li>
-								<li><a href="/jetcart/index">Logout</a></li>
-							</ul></li>
+								<li><a href="javascript:void(0);" id="custlogout">Logout</a></li>
+							<li><a href="/jetcart/register">Register</a></li>
+                                                        </ul></li>
 					</ul>
 				</div>
 			</div>

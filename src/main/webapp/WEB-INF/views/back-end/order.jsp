@@ -328,7 +328,7 @@
                             <div class="card-header">
                                 <h5>Manage Order</h5>
                             </div>
-                            <div class="card-body" style="display:none;" id="prd">
+<!--                            <div class="card-body" style="display:none;" id="prd">
                               <div class="table-responsive">
                                         <table class="table table-striped table-borderless qty">
                                           <thead>
@@ -341,12 +341,12 @@
                                           <th><strong>Price</strong></th>
                                           </thead>
                                           <tbody id="orderdetail">
-                                        <!--   <tr><td>Pink Slim Shirt</td><td>1</td><td><span>$25.10</span><td></tr>
-                                          <tr><td>SLim Fit Jeans</td><td>1</td><td><span>$555.00</span></td></tr> -->
+                                           <tr><td>Pink Slim Shirt</td><td>1</td><td><span>$25.10</span><td></tr>
+                                          <tr><td>SLim Fit Jeans</td><td>1</td><td><span>$555.00</span></td></tr> 
                                           </tbody>
                                         </table>
                                         </div>
-                                        <form id="orderform">
+                                                                        <form id="orderform">
 										  <div class="form-row ml-1">
 										    <div class="col-auto">
 										      <input type="text" class="form-control" name="firstname" placeholder="First name">
@@ -389,262 +389,163 @@
 										  <label class="custom-control-label" for="customRadioInline2">Local Pick Up</label>
 										</div>
 										</form>
-										</div>
-                           <!--    <div class="container">
-                         <form id="regform">
-                        <div class="row">
-                            <div class="col-lg-6 col-sm-12 col-xs-12">
-                                <div class="checkout-title">
-                                    <h3>Billing Details</h3>
-                                </div>
-                                <div id="error">
-                                
-                                </div>
-                                <div class="row check-out">
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <div class="field-label">First Name</div>
-                                        <input type="text" name="firstname" value="" placeholder="">
+										</div>-->
+
+                                                                                    <div class="col-xl-8 orderformbody" style="display:none" id="orderformbody">
+											<form class="needs-validation add-product-form" novalidate=""
+												id="orderform">
+												<div class="form">			
+													<div class="form-group mb-3 row">
+														<label for="validationCustom01"
+															class="col-xl-3 col-sm-4 mb-0">First Name</label> <input
+															class="form-control col-xl-8 col-sm-7"
+															id="firstname" name="firstname" type="text"
+															required="">
+														<div class="valid-feedback">Looks good!</div>
+													</div>
+													<div class="form-group mb-3 row">
+														<label for="validationCustom01"
+															class="col-xl-3 col-sm-4 mb-0">Product Name</label> <input
+															class="form-control col-xl-8 col-sm-7"
+															id="productname" name="productname" type="text"
+															required="">
+														<div class="valid-feedback">Looks good!</div>
+													</div>
+													<input type="hidden" class="form-control col-xl-8 col-sm-7"
+														name="id" id="id" />
+                                                                                                
+                                                                                                        <input type="hidden" class="form-control col-xl-8 col-sm-7"
+														name="ordid" id="ordid" />
+													<div class="form-group mb-3 row">
+														<label for="validationCustom02"
+															class="col-xl-3 col-sm-4 mb-0">Price</label> <input
+															class="form-control col-xl-8 col-sm-7"
+															name="price" id="price" type="text" required="">
+														<div class="valid-feedback">Looks good!</div>
+													</div>
+												   <div id="pricediv" style="" class="form-group mb-3 row">
+														<label for="validationCustom02"
+															class="col-xl-3 col-sm-4 mb-0">Total</label> <input
+															class="form-control col-xl-8 col-sm-7"
+															name="total" id="total" type="text" required="">
+														<div class="valid-feedback">Looks good!</div>
+													</div>
+													<div class="form-group mb-3 row">
+														<label for="validationCustom02"
+															class="col-xl-3 col-sm-4 mb-0">Payment Status
+															</label> <input
+															class="form-control col-xl-8 col-sm-7" id="paymentstatus"
+															name="paymentstatus" type="text" />								                
+														<div class="valid-feedback">Looks good!</div>
+													</div>
+                                                                                                        <div class="form-group mb-3 row">
+														<label for="validationCustom02"
+															class="col-xl-3 col-sm-4 mb-0">Country
+															</label> <input
+															class="form-control col-xl-8 col-sm-7" id="country"
+															name="country" type="text" />								                
+														<div class="valid-feedback">Looks good!</div>
+													</div>
+                                                                                                        <div class="form-group mb-3 row">
+														<label for="validationCustom02"
+															class="col-xl-3 col-sm-4 mb-0">Order Status
+															</label> <input
+															class="form-control col-xl-8 col-sm-7" id="ordstatus"
+															name="ordstatus" type="text" />								                
+														<div class="valid-feedback">Looks good!</div>
+													</div>
+                                                                                                        <div class="form-group row">
+														<label class="col-xl-3 col-sm-4">
+															:</label>
+														<div class="col-xl-8 col-sm-7 pl-0 description-sm">
+															<textarea id="editor2" name="proddescription" cols="10"
+                                                                                                                                  rows="4">
+                                                                                                                                    Type message to send to this user
+                                                                                                                        </textarea>
+														</div>
+													</div>
+                                                                                                          <div class="offset-xl-3 offset-sm-4">
+													<!--   add-product-form -->
+													<button type="button" class="btn btn-primary"
+														id="orderproduct">Send Message</button>
+													<button type="button" class="btn btn-light"
+													      id="viewattached">View Attached</button>
+                                                                                                        <button type="button" class="btn btn-light"
+                                                                                                                   id="viewclose">Close</button>
+												           </div>
+                                                                                                        </div>
+                                                                                                        </form>
+                                                                                            </div>
+                                     
+               <div class="card-body order-datatable table-responsive" style="display: none" id="tableattached">
+                      <table class="table table-striped">
+                                 <thead>
+                                 <tr>                  
+                                  <th>Ordid</th>                             
+                                  <th>Paymentstatus</th>                                                                
+                                  <th>Ordstatus</th>
+                                  <th>Orderdate</th>
+                                  <th>Total</th>
+                                  <th>Firstname</th>
+                                  <th>Country</th>
+                                  <th>Tax</th>
+                                  <th>Productname</th>
+                                  <th>Price</th>
+                                  <th>State</th>
+                              </tr>
+                              </thead>
+                              <tbody id="attachedorder">
+                           
+                              </tbody>
+                               </table>
+                     <div class="offset-xl-3 offset-sm-4">
+<!--                 <button type="button" class="btn btn-primary"
+                                        id="orderproduct">Send Message</button>
+                                <button type="button" class="btn btn-light"
+                                        id="viewattached">View Orders</button>
+                                <button type="button" class="btn btn-light"
+                                        id="viewclose">Close</button>-->
+                                 </div>
                                     </div>
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <div class="field-label">Last Name</div>
-                                        <input type="text" name="lastname" value="" placeholder="last name">
-                                    </div>
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <div class="field-label">Phone</div>
-                                        <input type="text" name="phone" value="" placeholder="phone">
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>>
-                                    </form>
-                                    </div> -->
-                            <div class="card-body order-datatable">
+                            <div class="card-body order-datatable" id="tablediv">
                                 <table class="display" id="basic-1">
                                     <thead>
                                     <tr>
-                                        <th>Order Id</th>                        
-                                        <th>Payment Status</th>
-                                        <th>Payment Method</th>
-                                        <th>Order Status</th>
-                                        <th>Date</th>
-                                        <th>Total</th>
-                                        <th>Action</th>
+                                        <th>id</th>  
+                                        <th>ordid</th>                             
+                                        <th>paymentstatus</th>
+                                        <th>paymentmethod</th>                                      
+                                        <th>ordstatus</th>
+                                        <th>orderdate</th>
+                                        <th>total</th>
+                                        <th>firstname</th>
+                                        <th>country</th>
+                                        <th>tax</th>
+                                        <th>productname</th>
+                                        <th>price</th>
+                                        <th>state</th>
                                     </tr>
                                     </thead>
-                                    <tbody id="customerorder">
-                                       <!--    
-                                        <tr>
-                                        <td>#51240</td>                                   
-                                        <td><span class="badge badge-secondary">Cash On Delivery</span></td>
-                                        <td>Paypal</td>
-                                        <td><span class="badge badge-success">Delivered</span></td>
-                                        <td>Dec 10,18</td>
-                                        <td>$54671</td>
-                                        <td><span class="fa fa-eye" style="cursor:pointer;" onclick="showprd('2')" title="view details">
-                                        </span><span class="fa fa-remove" style="cursor:pointer;" onclick="" title="cancel"></span></td>
-                                       </tr> 
-                                       -->
-                                     <!--
-                                    <tr>
-                                        <td>#51241</td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <img src="/assets/images/electronics/product/12.jpg" alt="" class="img-fluid img-30 mr-2 blur-up lazyloaded">
-                                                
-                                                <img src="/assets/images/electronics/product/3.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded">
-                                                
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-success">Paid</span></td>
-                                        <td>Master Card</td>
-                                        <td><span class="badge badge-primary">Shipped</span></td>
-                                        <td>Feb 15,18</td>
-                                        <td>$2136</td>
-                                        <td><span class="fa fa-eye"></span><span class="fa fa-remove"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>#51242</td>
-                                        <td><img src="/assets/images/electronics/product/14.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded"></td>
-                                        <td><span class="badge badge-warning">Awaiting Authentication</span></td>
-                                        <td>Debit Card</td>
-                                        <td><span class="badge badge-warning">Processing</span></td>
-                                        <td>Mar 27,18</td>
-                                        <td>$8791</td>
-                                        <td><span class="fa fa-eye"></span><span class="fa fa-remove"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>#51243</td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <img src="/assets/images/electronics/product/6.jpg" alt="" class="img-fluid img-30 mr-2 blur-up lazyloaded">
-                                                
-                                                <img src="/assets/images/furniture/8.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded">
-                                               
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-danger">Payment Failed</span></td>
-                                        <td>Master Card</td>
-                                        <td><span class="badge badge-danger">Cancelled</span></td>
-                                        <td>Sep 1,18</td>
-                                        <td>$139</td>
-                                        <td><span class="fa fa-eye"></span><span class="fa fa-remove"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>#51244</td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <img src="/assets/images/jewellery/pro/18.jpg" alt="" class="img-fluid img-30 mr-2 blur-up lazyloaded">
-                                                
-                                                <img src="/assets/images/fashion/pro/06.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded">
-                                                
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-success">Paid</span></td>
-                                        <td>Paypal</td>
-                                        <td><span class="badge badge-primary">Shipped</span></td>
-                                        <td>May 18,18</td>
-                                        <td>$4678</td>
-                                        <td><span class="fa fa-eye"></span><span class="fa fa-remove"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>#51245</td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <img src="/assets/images/electronics/product/19.jpg" alt="" class="img-fluid img-30 mr-2 blur-up lazyloaded">
-                                                
-                                                <img src="/assets/images/electronics/product/20.jpg" alt="" class="img-fluid img-30 mr-2 blur-up lazyloaded">
-                                                <img src="/assets/images/electronics/product/23.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded">
-                                                
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-success">Paid</span></td>
-                                        <td>Visa</td>
-                                        <td><span class="badge badge-success">Delivered</span></td>
-                                        <td>Jan 14,18</td>
-                                        <td>$6791</td>
-                                         <td><span class="fa fa-eye"></span><span class="fa fa-remove"></span></td>
-                                    </tr> -->
-                                    <!-- 
-                                    <tr>
-                                        <td>#51246</td>
-                                        <td><img src="/assets/images/electronics/product/24.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded"></td>
-                                        <td><span class="badge badge-warning">Awaiting Authentication</span></td>
-                                        <td>Credit Card</td>
-                                        <td><span class="badge badge-warning">Processing</span></td>
-                                        <td>Apr 22,18</td>
-                                        <td>$976</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#51247</td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <img src="/assets/images/electronics/product/21.jpg" alt="" class="img-fluid img-30 mr-2 blur-up lazyloaded">
-                                                
-                                                <img src="/assets/images/electronics/product/8.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded">
-                                                
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-danger">Payment Failed</span></td>
-                                        <td>Master Card</td>
-                                        <td><span class="badge badge-danger">Cancelled</span></td>
-                                        <td>Mar 26,18</td>
-                                        <td>$3212</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#51248</td>
-                                        <td><img src="/assets/images/electronics/product/18.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded"></td>
-                                        <td><span class="badge badge-secondary">Cash On Delivery</span></td>
-                                        <td>Paypal</td>
-                                        <td><span class="badge badge-primary">Shipped</span></td>
-                                        <td>Feb 29,18</td>
-                                        <td>$6719</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#51249</td>
-                                        <td><img src="/assets/images/electronics/product/17.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded"></td>
-                                        <td><span class="badge badge-success">Paid</span></td>
-                                        <td>Master Card</td>
-                                        <td><span class="badge badge-secondary">Processing</span></td>
-                                        <td>Sep 2,18</td>
-                                        <td>$9765</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#51250</td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <img src="/assets/images/electronics/product/7.jpg" alt="" class="img-fluid img-30 mr-2 blur-up lazyloaded">
-                                                
-                                                <img src="/assets/images/electronics/product/4.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded">
-                                               
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-success">Paid</span></td>
-                                        <td>Credit Card</td>
-                                        <td><span class="badge badge-primary">Shipped</span></td>
-                                        <td>Dec 10,18</td>
-                                        <td>$9706</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#51251</td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <img src="/assets/images/electronics/product/22.jpg" alt="" class="img-fluid img-30 mr-2 blur-up lazyloaded">
-                                                
-                                                <img src="/assets/images/electronics/product/20.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded">
-                                              
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-secondary">Cash On Delivered</span></td>
-                                        <td>Paypal</td>
-                                        <td><span class="badge badge-primary">Shipped</span></td>
-                                        <td>Feb 15,18</td>
-                                        <td>$1500</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#51252</td>
-                                        <td>
-                                            <img src="/assets/images/electronics/product/3.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded">
-                                        </td>
-                                        <td><span class="badge badge-danger">Payment Failed</span></td>
-                                        <td>Credit Card</td>
-                                        <td><span class="badge badge-danger">Cancelled</span></td>
-                                        <td>Mar 27,18</td>
-                                        <td>$18.97</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#51253</td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <img src="/assets/images/electronics/product/11.jpg" alt="" class="img-fluid img-30 mr-2 blur-up lazyloaded">
-                                                
-                                                <img src="/assets/images/electronics/product/2.jpg" alt="" class="img-fluid img-30 mr-2 blur-up lazyloaded">
-                                                <img src="/assets/images/electronics/product/9.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded">
-                                              
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-success">Paid</span></td>
-                                        <td>Visa</td>
-                                        <td><span class="badge badge-success">Delivered</span></td>
-                                        <td>Mar 30,18</td>
-                                        <td>$3478</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#51254</td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <img src="/assets/images/electronics/pro/4.jpg" alt="" class="img-fluid img-30 mr-2 blur-up lazyloaded">
-                                                 
-                                                <img src="/assets/images/electronics/pro/5.jpg" alt="" class="img-fluid img-30 blur-up lazyloaded">
-                                                 
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-warning">Awaiting Authentication</span></td>
-                                        <td>0.80 %</td>
-                                        <td><span class="badge badge-warning">Processing</span></td>
-                                        <td>Apr 5,18</td>
-                                        <td>$9672</td>
-                                    </tr> -->
+                                    <tbody>
+
                                     </tbody>
+                                        <tfoot>
+                                         <tr>
+                                        <th>id</th>  
+                                        <th>ordid</th>                             
+                                        <th>paymentstatus</th>
+                                        <th>paymentmethod</th>                                      
+                                        <th>ordstatus</th>
+                                        <th>orderdate</th>
+                                        <th>total</th>
+                                        <th>firstname</th>
+                                        <th>country</th>
+                                        <th>tax</th>
+                                        <th>productname</th>
+                                        <th>price</th>
+                                        <th>state</th>
+                                        </tr>     
+                                       </tfoot>
                                 </table>
                             </div>
                         </div>
@@ -691,8 +592,8 @@
 <script src="/assets/js/sidebar-menu.js"></script>
 
 <!-- Datatable js-->
-<script src="/assets/js/datatables/jquery.dataTables.min.js"></script>
-<script src="/assets/js/datatables/custom-basic.js"></script>
+<!--<script src="/assets/js/datatables/jquery.dataTables.min.js"></script>
+<script src="/assets/js/datatables/custom-basic.js"></script>-->
 
 <!--Customizer admin-->
 <script src="/assets/js/admin-customizer.js"></script>
@@ -705,6 +606,7 @@
 
 <!--script admin-->
 <script src="/assets/js/admin-script.js"></script>
- <jsp:include page="../frontend/frontendplugin.jsp" />
+<%--  <jsp:include page="../frontend/frontendplugin.jsp" /> --%>
+  <jsp:include page="plugins.jsp" />
 </body>
 </html>

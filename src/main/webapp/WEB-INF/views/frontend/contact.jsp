@@ -680,36 +680,37 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <form class="theme-form">
+                    <form class="theme-form" id="contact">
                         <div class="form-row">
                             <div class="col-md-6">
                                 <label for="name">First Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter Your name"
+                                <input type="text" name="firstname" class="form-control" id="name" placeholder="Enter Your name"
                                     required="">
                             </div>
                             <div class="col-md-6">
                                 <label for="email">Last Name</label>
-                                <input type="text" class="form-control" id="last-name" placeholder="Email" required="">
+                                <input type="text" name="lastname" class="form-control" id="last-name" placeholder="Email" required="">
                             </div>
                             <div class="col-md-6">
                                 <label for="review">Phone number</label>
-                                <input type="text" class="form-control" id="review" placeholder="Enter your number"
+                                <input type="text" name="phone" class="form-control" id="review" placeholder="Enter your number"
                                     required="">
                             </div>
                             <div class="col-md-6">
                                 <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email" placeholder="Email" required="">
+                                <input type="text" name="email" class="form-control" id="email" placeholder="Email" required="">
                             </div>
                             <div class="col-md-12">
                                 <label for="review">Write Your Message</label>
-                                <textarea class="form-control" placeholder="Write Your Message"
+                                <textarea name="customertext" class="form-control" placeholder="Write Your Message"
                                     id="exampleFormControlTextarea1" rows="6"></textarea>
                             </div>
-                            <div class="col-md-12">
-                                <button class="btn btn-solid" type="submit">Send Your Message</button>
-                            </div>
-                        </div>
+                           
+                        </div>               
                     </form>
+                       <div class="col-md-12">
+                         <a href="javascript:void(0);" class="btn btn-solid" id="submitcontact2">Send Your Message </a>
+                       </div>
                 </div>
             </div>
         </div>
@@ -919,7 +920,7 @@
 
     <!-- Theme js-->
     <script src="../assets/js/script.js"></script>
-
+    <jsp:include page="frontendplugin.jsp" />
     <script>
         function openSearch() {
             document.getElementById("search-overlay").style.display = "block";

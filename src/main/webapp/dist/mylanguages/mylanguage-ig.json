@@ -28,6 +28,9 @@
    "logout":"pụọ"
   },
   "position":"Onye isi njikwa.",
+  "footer":{
+    "maker":"Ejiri JetSoft rụpụta ya ma rụọ ya"
+  },
   "sidebar":{
       "home":"Dashboard",
       "products":"Productsfọdụ ngwaahịa",
@@ -44,7 +47,7 @@
       "coupon":"Kupọns",
       "couponlist":"Ndepụta nke Kupọns",
       "couponcreate":"Mepụta Kupọns",
-      "page":"Ibe akwukwo",
+      "pages":"Ibe akwukwo",
       "pagelist":"Ndepụta peeji",
       "pagecreate":"Mepụta ibe",
       "media":"Mgbasa ozi",
@@ -60,12 +63,17 @@
       "localization":"Ọnọdụ",
       "translations":"Ntughari",
       "currency":"Ọnụego mgbanwe",
+      "review":"nyocha",
+      "customers":"ndị ahịa",
+      "taxes":"ụtụ isi",
       "tax":"Tụ Isi",
-      "report":"Akụkọ",
+      "reports":"Akụkọ",
       "settings":"Ntọala",
       "profile":"Profaịlụ",
       "invoice":"Nchaji",
-      "login":"Banye"
+      "login":"Banye",
+      "message":"Izi ozi",
+      "viewmessage":"Lelee ozi"
   },
   "index":{
    "panel":"Dashboard",  
@@ -95,7 +103,7 @@
    "goodsreturn":"Buyzụta ere",
    "detail":"Nkọwa",
    "qty":"Onu Ego",
-   "statu":"Ọkwa",
+   "status":"Ọkwa",
    "p":"Ahịa",
    "emp":"ọrụ ọrụ",
    "name":"Aha ikpeazụ",
@@ -108,11 +116,6 @@
    "monthrevenue":"Ego onwa gara aga"
 },
 "digital2":"Crista Digital nchịkwa nchịkwa"
-
-
-
-
-
 }
 
 

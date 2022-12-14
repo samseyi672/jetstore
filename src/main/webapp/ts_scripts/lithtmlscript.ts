@@ -19,6 +19,26 @@ export const dialog  = (form:any,header:any,footer:any)=>{
 </div>
    `
 }
+export const secondialog  = (form:Function,header:Function,footer:Function)=>{
+  return (`
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+            ${header()} 
+          </div>
+          <div class="modal-body">
+            <div id="error"></div>
+             ${form()}
+          </div>
+          <div class="modal-footer">
+               ${footer()}
+          </div>
+      </div>
+  </div>
+</div>
+  `);
+}
 // <form class="needs-validation">
 // <div class="form">
 //     <div class="form-group">

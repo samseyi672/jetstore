@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -41,14 +42,15 @@ public class PageNavigationProcessingController {
  
 	   @Autowired
 	private   RestTemplate restCaller  ;
-	//private final String jwtTokenURL ="http://localhost:1022/authenticate" ;
-	private final String jwtTokenURL  ="https://cristabackend.herokuapp.com/authenticate" ;
-	 //private final String customerJwtTokenURL ="http://localhost:1022/authenticatecustomer" ;
-    private final String customerJwtTokenURL ="https://cristabackend.herokuapp.com/authenticatecustomer" ;
+	   @Value("{page.jwtTokenURL}")
+	private String jwtTokenURL ;
+	//private final String jwtTokenURL  ="https://cristabackend.herokuapp.com/authenticate" ;
+	@Value("{page.customerJwtTokenURL}")
+	 private String customerJwtTokenURL ;
+   // private final String customerJwtTokenURL ="https://cristabackend.herokuapp.com/authenticatecustomer" ;
 	   //@PostMapping("/login")
 	   @RequestMapping(value = "/login", method = RequestMethod.POST)
-	 public ResponseEntity<?> loginUsers(@Valid @RequestBody JwtRequest 
-			 authenticationRequest,BindingResult result,HttpServletRequest request,HttpServletResponse response) throws JsonProcessingException{
+	 public ResponseEntity<?> loginUsers(@Valid @RequestBody JwtRequest authenticationRequest,BindingResult result,HttpServletRequest request,HttpServletResponse response) throws JsonProcessingException{
 	        // call rest api here 
 		   System.out.println(authenticationRequest.toString());
 		   Map<String,String> vars  = new HashMap<String,String>()  ;
@@ -86,7 +88,7 @@ public class PageNavigationProcessingController {
 			    HttpHeaders headers =  getHeaders() ;
 			    HttpEntity<String> requestInJson  = new HttpEntity<String>(requestBody,headers) ;
 			       // restCaller.getForEntity(jwtTokenURL,JwtResponse.class,vars) ; 
-			    ResponseEntity<JwtResponse> authenticationToken  =
+     ResponseEntity<JwtResponse> authenticationToken  =
 			     restCaller.exchange(customerJwtTokenURL, HttpMethod.POST, requestInJson,JwtResponse.class) ;
 			    // if authentication  is successful,
 			    if(authenticationToken.getStatusCode().equals(HttpStatus.OK)) {

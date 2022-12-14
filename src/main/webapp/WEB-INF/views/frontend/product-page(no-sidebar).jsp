@@ -183,6 +183,7 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
     <!-- Section ends -->
 
@@ -486,6 +487,15 @@
     <script src="/assets/js/script.js"></script>
 
     <script>
+        $(function(){
+$("#addClass").click(function () {
+  $('#sidebar_secondary').addClass('popup-box-on');
+    });
+  
+    $("#removeClass").click(function () {
+  $('#sidebar_secondary').removeClass('popup-box-on');
+    });
+}) 
         function openSearch() {
             document.getElementById("search-overlay").style.display = "block";
         }

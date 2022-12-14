@@ -942,7 +942,6 @@
     </div>
     <!-- breadcrumb end -->
 
-
     <!-- section start -->
     <section class="section-b-space ratio_asos">
         <div class="collection-wrapper">
@@ -957,7 +956,7 @@
                             <div class="collection-collapse-block open">
                                 <h3 class="collapse-block-title">brand</h3>
                                 <div class="collection-collapse-block-content">
-                                    <div class="collection-brand-filter">
+                                    <div class="collection-brand-filter" id="collection-brand-filter">
                                         <div class="custom-control custom-checkbox collection-filter-checkbox">
                                             <input type="checkbox" class="custom-control-input" value="zara" id="zara">
                                             <label class="custom-control-label" for="zara">zara</label>
@@ -986,7 +985,7 @@
                                 <h3 class="collapse-block-title">colors</h3>
                                 <div class="collection-collapse-block-content">
                                     <div class="color-selector">
-                                        <ul>
+                                        <ul id="color-selector" onclick="searchcolor(this.id)">
                                             <li class="color-1 white" data-white="white"></li>
                                             <li class="color-2 grey" data-grey="grey"></li>
                                             <li class="color-3 red" data-red="red"></li>
@@ -1002,7 +1001,7 @@
                             <div class="collection-collapse-block border-0 open">
                                 <h3 class="collapse-block-title">size</h3>
                                 <div class="collection-collapse-block-content">
-                                    <div class="collection-brand-filter">
+                                    <div class="collection-brand-filter" id="collection-size-filter">
                                         <div class="custom-control custom-checkbox collection-filter-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="hundred">
                                             <label class="custom-control-label" for="hundred">s</label>
@@ -1027,16 +1026,16 @@
                                 <h3 class="collapse-block-title">Type</h3>
                                 <div class="collection-collapse-block-content">
                                     <div class="collection-brand-filter">
-                                        <div class="custom-control custom-checkbox collection-filter-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="hundred2">
+                                        <div class="custom-control custom-radio collection-filter-radio">
+                                            <input name="mytype" onclick="searchtype(this.id)" type="radio" value="New" class="custom-control-input" id="hundred2">
                                             <label class="custom-control-label" for="hundred2">New</label>
                                         </div>
-                                        <div class="custom-control custom-checkbox collection-filter-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="twohundred2">
+                                        <div class="custom-control custom-radio collection-filter-radio">
+                                            <input name="mytype" onclick="searchtype(this.id)" value="Old" type="radio" class="custom-control-input" id="twohundred2">
                                             <label class="custom-control-label" for="twohundred2">Old</label>
                                         </div>
-                                        <div class="custom-control custom-checkbox collection-filter-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="threehundred2">
+                                        <div class="custom-control custom-radio collection-filter-radio">
+                                            <input name="mytype" onclick="searchtype(this.id)" value="Refurbished" type="radio" class="custom-control-input" id="threehundred2">
                                             <label class="custom-control-label" for="threehundred2">Refurbished</label>
                                         </div>
                                     </div>
@@ -1048,7 +1047,7 @@
                                 <div class="collection-collapse-block-content">
                                     <div class="wrapper mt-3">
                                         <div class="range-slider">
-                                            <input type="text" class="js-range-slider" value="" />
+                                            <input type="text"  class="js-range-slider" id="js-range-slider" value="" />
                                         </div>
                                     </div>
                                 </div>
@@ -1056,7 +1055,7 @@
                         </div>
                         <!-- silde-bar colleps block end here -->
                         <!-- side-bar single product slider start -->
-                        <div class="theme-card">
+                        <div class="theme-card" id="slide-1">
                             <h5 class="title-border">new product</h5>
                             <div class="offer-slider slide-1">
                                 <div>
@@ -1127,9 +1126,9 @@
                         </div>
                         <!-- side-bar single product slider end -->
                         <!-- side-bar banner start here -->
-                        <div class="collection-sidebar-banner">
-                            <a href="#"><img src="/assets/images/side-banner.png" class="img-fluid blur-up lazyload" alt=""></a>
-                        </div>
+<!--                        <div class="collection-sidebar-banner">
+                            <a href="#">2<img src="/assets/images/side-banner.png" class="img-fluid blur-up lazyload" alt=""></a>
+                        </div>-->
                         <!-- side-bar banner end here -->
                     </div>
                     <div class="collection-content col">
@@ -1137,15 +1136,20 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="top-banner-wrapper">
-                                        <a href="#" id="catimg"><img src="/assets/images/mega-menu/2.jpg" class="img-fluid blur-up lazyload" alt=""></a>
-                                        <div class="top-banner-content small-section">
+                                        <a href="#" id="catimg">
+                                            <img src="/assets/images/mega-menu/2.jpg" class="img-fluid blur-up lazyload" alt="">
+                                          </a>
+                                            <div class="top-banner-content small-section" id="small-section">
                                             <h4>fashion</h4>
                                             <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                             </h5>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
                                                 it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-                                                of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                        </div>
+                                                of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                            </p>
+                                            
+                                            </div>
                                     </div>
                                     <div class="collection-product-wrapper">
                                         <div class="product-top-filter">
@@ -1199,7 +1203,7 @@
                                             </div>
                                         </div>
                                         <div class="product-wrapper-grid">
-                                            <div class="row margin-res">
+                                            <div class="row margin-res" id="margin-res">
                                                 <div class="col-xl-3 col-6 col-grid-box">
                                                     <div class="product-box">
                                                         <div class="img-wrapper">
@@ -1221,12 +1225,12 @@
                                                             <div>
                                                                 <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
                                                                 <a href="product-page(no-sidebar).html">
-                                                                    <h6>Slim Fit Cotton Shirt</h6>
+                                                                    <h6>Slim Fit Cotton</h6>
                                                                 </a>
                                                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
                                                                     of type and scrambled it to make a type specimen book
                                                                 </p>
-                                                                <h4>$500.00</h4>
+                                                                <h4>$520.00</h4>
                                                              <!--    <ul class="color-variant">
                                                                     <li class="bg-light0"></li>
                                                                     <li class="bg-light1"></li>

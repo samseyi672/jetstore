@@ -36,6 +36,8 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/color7.css"
 	media="screen" id="color">
 
+<link rel="stylesheet" href="/dist/mycss/toastr.min.css" />
+
 	
 	
 	

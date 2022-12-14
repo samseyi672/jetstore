@@ -2382,7 +2382,8 @@ $(function() {
         $inputTo = $(".js-input-to"),
         instance,
         min = 1000,
-        max = 1000000000,
+      //  max = 1000000000, this was edited
+        max = 5000000,
         from = 0,
         to = 0;
 

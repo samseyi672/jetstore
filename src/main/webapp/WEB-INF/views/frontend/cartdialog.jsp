@@ -1,4 +1,4 @@
-    <div class="modal fade bd-example-modal-lg theme-modal cart-modal" id="addtocart" tabindex="-1" role="dialog"
+    <div class="modal fade bd-example-modal-lg theme-modal cart-modal" id="addtocart2" tabindex="-1" role="dialog"
         aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -29,10 +29,10 @@
                                                 <a href="/jetcart/marketplace" class="continue btn btn-solid">Continue shopping</a>
                                             </div>
 
-                                            <div class="upsell_payment">
+<!--                                            <div class="upsell_payment">
                                                 <img src="/assets/images/payment_cart.png"
                                                     class="img-fluid blur-up lazyload" alt="">
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                   

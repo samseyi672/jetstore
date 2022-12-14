@@ -3,10 +3,17 @@ package com.jetstore.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/jetcart")
 public class FrontPageController {
+	@ResponseBody
+	@GetMapping("/test")
+	public String test() {
+		System.out.println("calling  index");
+		return "see me";
+	}
 
 	@GetMapping("/index")
 	public String index() {
@@ -26,6 +33,12 @@ public class FrontPageController {
 		return "frontend/cart";
 	}
 
+	@GetMapping("/chat")
+	public String chat() {
+		System.out.println("calling  index");
+		return "frontend/chat";
+	}
+	
 	@GetMapping("/checkout")
 	public String checkout() {
 		System.out.println("calling  index");
@@ -134,12 +147,17 @@ public class FrontPageController {
        	public String becomevendor() {
        		System.out.println("calling  index");
        		return "frontend/become-vendor";
-       	}
+         	}
              @GetMapping("/blog")
         	public String blog() {
         		System.out.println("calling  index");
         		return "frontend/blog-page";
         	}
+             @GetMapping("/custlogin")
+         	public String custlogin() {
+         		System.out.println("calling  index");
+         		return "frontend/custlogin";
+         	}
              @GetMapping("/collection")
          	public String collection() {
          		System.out.println("calling  index");

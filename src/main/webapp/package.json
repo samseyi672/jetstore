@@ -34,12 +34,12 @@
     "webpack-cli": "^4.6.0"
   },
   "dependencies": {
+    "@asmagin/google-translate-api": "^8.0.2",
     "@babel/runtime": "^7.13.17",
     "@types/async": "^3.2.6",
     "async": "^3.2.0",
     "gridjs": "^4.0.0",
     "jquery": "^3.6.0",
-    "lodash": "^4.17.21",
-    "translate": "^1.2.3"
+    "lodash": "^4.17.21"
   }
 }

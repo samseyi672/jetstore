@@ -46,16 +46,18 @@
 
 <link rel="stylesheet" type="text/css" href="/dist/mycss/sweetalert2.min.css">
 
+<link href="/dist/mycss/_all-skins.min.css" rel="stylesheet" type="text/css"/>
+<!--<link href="/dist/mycss/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css">-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.12.1/af-2.4.0/b-2.2.3/b-colvis-2.2.3/b-html5-2.2.3/b-print-2.2.3/cr-1.5.6/date-1.1.2/fc-4.1.0/r-2.3.0/rg-1.2.0/rr-1.2.8/sb-1.3.4/sp-2.0.2/sl-1.4.0/datatables.min.css"/>
 <link rel="stylesheet" href="/dist/mycss/toastr.min.css" />
 <link rel="stylesheet" href="/dist/mycss/jquery-ui.css" />
 <link rel="stylesheet" href="/dist/mycss/alertify.min.css" />
-<!-- <link rel="stylesheet" href="/dist/mycss/select2.min.css"
-	rel="stylesheet" /> -->
-<link rel="stylesheet" href="/dist/mycss/mermaid.min.css"
-	rel="stylesheet" />
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js">
-</script> -->
+ <link rel="stylesheet" href="/dist/mycss/select2.min.css"
+	rel="stylesheet" /> 
+<link rel="stylesheet" href="/dist/mycss/mermaid.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="/dist/mycss/style3.css" rel="stylesheet" />
 
 
 

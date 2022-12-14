@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="crista">
@@ -12,34 +12,33 @@
     <link rel="shortcut icon" href="../assets/images/favicon/crista.png" type="image/x-icon" />
     <title>CRISTA DIGITAL</title>
 
-    <!--Google font-->
+    Google font
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
-    <!-- Icons -->
+     Icons 
     <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.css">
 
-    <!--Slick slider css-->
+    Slick slider css
     <link rel="stylesheet" type="text/css" href="../assets/css/slick.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/slick-theme.css">
 
-    <!-- Animate icon -->
+     Animate icon 
     <link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
 
-    <!-- Themify icon -->
+     Themify icon 
     <link rel="stylesheet" type="text/css" href="../assets/css/themify-icons.css">
 
-    <!-- Bootstrap css -->
+     Bootstrap css 
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
 
-    <!-- Theme css -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/color1.css" media="screen" id="color">
-
-
+     Theme css 
+    <link rel="stylesheet" type="text/css" href="../assets/css/color1.css" media="screen" id="color">-->
+ <jsp:include page="headerlinks.jsp" />
 </head>
 
 
 <!-- header start -->
-<header>
+<!--<header>
     <div class="mobile-fix-option"></div>
     <div class="top-header">
         <div class="container">
@@ -201,7 +200,7 @@
                                 <div>
                                     <nav id="main-nav">
                                         <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
-                                        <!-- Sample menu definition -->
+                                         Sample menu definition 
                                         <ul id="main-menu" class="sm pixelstrap sm-horizontal">
                                             <li>
                                                 <div class="mobile-back text-right">Back<i
@@ -589,9 +588,9 @@
             </div>
         </div>
     </div>
-</header>
+</header>-->
 <!-- header end -->
-
+ <jsp:include page="header.jsp" />
 
 <!-- breadcrumb start -->
 <div class="breadcrumb-section">
@@ -620,12 +619,12 @@
 <section class="about-page section-b-space">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+<!--            <div class="col-lg-12">
                 <div class="banner-section"><img src="../assets/images/about/vendor.jpg"
                         class="img-fluid blur-up lazyload" alt=""></div>
-            </div>
+            </div>-->
             <div class="col-sm-12">
-                <h4>Start your business with Multikart & reach customers across the World...</h4>
+                <h4>Start your business & reach customers across the World...</h4>
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,</p>
                 <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and
                     demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee
@@ -1080,7 +1079,8 @@
         document.getElementById("search-overlay").style.display = "none";
     }
 </script>
-
+    <!-- latest jquery-->
+        <jsp:include page="plugins2.jsp" />
 </body>
 
 </html>

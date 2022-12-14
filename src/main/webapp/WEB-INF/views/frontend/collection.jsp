@@ -812,7 +812,7 @@
 
 
     <!-- footer start -->
-   <jsp:include page="footer.jsp" /> 
+
 <!--    
     <footer class="footer-light">
         <div class="light-layout">

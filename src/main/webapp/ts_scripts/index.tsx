@@ -9,19 +9,28 @@ declare var alertify: any;
 declare var StringBuilder: any;
 declare var Dropzone: any;
 declare var CKEDITOR: any;
+declare var translate: any;
+declare var createjs: any;
+declare var responsiveVoice:any ;
+declare var dateFns:any ;
+//declare var requirejs:any;
+// declare var process: any;
 // import * '../dist/mylanguages/'
 // remember to remove create create  link 
 import { login } from "./tsbackendscript/login";
-import { backendurl, loginurl, theprotocol } from "./url";
+import { backendurl, loginurl, theprotocol,websocketurl } from "./url";
 import { invalidatetoken, redirectiftokenisnull, jsonresult } from "./miscellaneous";
 import { dialog } from "./lithtmlscript";
-import { formsubmit, checktoken, submitform, processrequest2 } from "./tsbackendscript/ajaxfunctioncall";
+import { sendmailtocust,formsubmit, checktoken, submitform, processrequest2,onloaddatatable2,setajax, contenttype, contenttypewithtoken,onloaddatawithfetch,setajaxwithform,onMessageReceived,onPrivateMessage} from "./tsbackendscript/ajaxfunctioncall";
 import { register } from "./register";
 import { User } from "./user";
+import { secondialog } from "./lithtmlscript";
 import { product } from "./product";
 import { coupon } from './coupon';
 //import { waterfall, series, each, asyncify, forEach, any } from 'async';
 import { createtables, createtables2 } from './tables'
+//import  translate from 'google-translate-api';
+//import translate from "translate";
 //import { Search } from "gridjs/dist/src/view/plugin/search/search";
 toastr.options = {  // toast and notification
   "closeButton": true,
@@ -59,6 +68,7 @@ $('#login').on('click', (e: any) => {
   const form = new FormData(); // just note  this
   form.append('username', username);
   form.append('password', password);
+
   // alert('login');
   loginobj.loginaction(form, "");
 });
@@ -335,7 +345,9 @@ $('.language-dropdown').on('click', (e: any) => {
       $('[data-localize]').localize('../dist/mylanguages/mylanguage', { language: 'ig' });
       alertify.success("Dịkwa mma")
     }
-      , function () { alertify.error('Ikagbu') }).set('labels', { ok: 'Ọ dị mma!', cancel: 'Naa!' });;
+  ,function () { 
+    alertify.error('Ikagbu') }).set('labels', { ok: 'Ọ dị mma!', cancel: 'Naa!' 
+      });;
   } else if (e.target.lastChild.data === 'Hausa') {
     alert(e.target.lastChild.data);
   }
@@ -1306,7 +1318,7 @@ const sendmessage = (e: any) => {
     // call event subscription 
     $.ajax({
       url: `${backendurl}/dispatchEvent`,
-      type: 'POST',
+      type: 'GET',
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       },
@@ -1358,11 +1370,31 @@ const subscribetoevent = (eventSource: EventSource, evtype: string) => {
   eventSource.addEventListener(evtype, (event: any) => {
     if (event.data) {
       console.log('from dispatch event ', event.data);
-      toastr.success('message sent successfully');
-      alertify.success('Ok');
-      // eventSource.close();
+      toastr.success('An Order is placed');
+    //  var beepsound = new Audio('https://www.soundjay.com/button/sounds/beep-01a.mp3');
+    responsiveVoice.speak('An order is placed.',"US English Female", {volume:20,pitch:0.8}); 
+      // alertify.success('Ok');
+      eventSource.close();
+      console.log($('#ordercounter').text()) ;
+     // alert($('#ordercounter').text()) ;
+     parseInt($('#ordercounter').text())===0?$('#ordercounter').text('1'):$('#ordercounter').text((parseInt($('#ordercounter').text())+1).toString()) ;
+     // $('#ordercounter').text(parseInt($('#ordercounter').text())===0?'1':parseInt($('#ordercounter').text())+1);
+      if(datatable!==null && datatable!== undefined){
+        alert('reloading') 
+        datatable.ajax.reload() ;
+        alert('reload')
+      }
+      subscribetoevent(new EventSource(`${backendurl}/subscribe?vendorname=${localStorage.getItem('vendorname')}`),'vendornews');
     }
   });
+  // eventSource.addEventListener("message", (event: any) => {
+  //   if (event.data) {
+  //     console.log('from dispatch event ', event.data);
+  //     toastr.success('message sent successfully');
+  //     alertify.success('Ok');
+  //     eventSource.close();
+  //   }
+  // });
   // for error 
   eventSource.addEventListener("error", (event: any) => {
     if (event.currentTarget.readyState === EventSource.CLOSED) {
@@ -1371,13 +1403,154 @@ const subscribetoevent = (eventSource: EventSource, evtype: string) => {
       eventSource.close();
     }
   });
-  window.onbeforeunload = function () {
-    eventSource.close();
-  }
+  // window.onbeforeunload = function () {
+  //   eventSource.close();
+  // }
+
   // console.log('closing  connection .....') ;
   // eventSource.close() ;
   // return eventSource ;
 }
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   requirejs(['@asmagin/google-translate-api'], function (translate:any) {
+  //        translate('Ik spreek Engels', {to: 'ig'}).then((res) => {
+  //        console.log('right',res.text);
+  //        console.log(res.from.language.iso);   
+  //            }).catch((err) => {
+  //        console.error('error',err);
+  //      });
+  //       });
+  //     });
+async function translateString(str:string,translateTo:string){
+     translate.engine="google";
+     translate.key="AIzaSyDfqVwrOlZJTHGyxS7qnHdQ5XLqVME2EEY";
+     const text  = await translate(str,translateTo);
+     console.log(text);
+} 
+let datatable:any;  
+let datatable2:any;  // resusable datatable
+$('#orderproduct').on('click',function(e:Event){
+  // alert($('#ordid').val()) ;
+  if(confirm('Do you want to send message to this Customer ?')){
+   const ordid  =  $('#ordid').val() ;
+   const message = CKEDITOR.instances.editor2.getData() as string;
+   if(message.length===0 || message===""||message==='Type message to send to this user'){
+    const content  = contenttypewithtoken(localStorage.getItem('token')) ;   
+    setajax('text', `${backendurl}/order/sendinfoonstock/${ordid}`, 'get', "",(response:any)=>{
+      console.log('response',response) ;
+      toastr.success('Message sent successfully') ;
+    },()=>{},content);
+      }else{
+        toastr.error('the message cannot be empty') ;
+        return ;
+      } 
+     }else{
+      toastr.error('cancelled') ;
+     }
+})
+//print div
+function Popup(data:string) {
+  var myWindow = window.open('', 'my div', 'height=400,width=600') ;
+  myWindow.document.write('<html><head><title>my div</title>');
+  /*optional stylesheet*/ //myWindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+  myWindow.document.write('</head><body >');
+  myWindow.document.write(data);
+  myWindow.document.write('</body></html>');
+  myWindow.document.close(); // necessary for IE >= 10
+  //myWindow.onload=function(){ // necessary if the div contain images
+      myWindow.focus(); // necessary for IE >= 10
+      myWindow.print();
+      setTimeout(function(){window.close();}, 1); // for chrome
+     // myWindow.close();
+ // };
+}
+//generte invoice 
+$('#geninvoice').on('click',()=>{
+ if(confirm('Do you want to generate invoice')){
+  //document.getElementById("luck").contentDocument.body.innerHTML = $('#tableattached').html();
+  //  setTimeout(function(){
+  //   luck.contentWindow.print();
+  //  },
+  //  10);
+  setTimeout(function(){
+    Popup($('#myprint').html());
+  },200);
+ }
+}) ;
+
+//view other attached order and also in trans
+$('#viewattached').on('click',(e:any)=>{
+  const content  = contenttypewithtoken(localStorage.getItem('token')) ;
+  const ordid  = $('#orderid').val() ; 
+  //alert(ordid) ;
+  setajax('json', `${backendurl}/order/getorders/${ordid}`, 'get', "",(response:any)=>{
+    console.log('response',response) ;
+    //process the response
+   // firstname,price,total,orderdate,productname,paymentstatus
+   let myprint  = document.getElementById('myprint') as HTMLDivElement ;
+  let body2  =  response.map((element:any)=>{
+      console.log('element',element) ;
+      return(`<tr><td>${element.ordid}</td><td>${element.paymentstatus}</td>
+      <td>${element.ordstatus}</td><td>${element.orderdate}</td>
+      <td>${element.total}</td><td>${element.firstname}</td>
+      <td>${element.country}</td><td>${element.tax}</td>
+      <td>${element.productname}</td><td>${element.price}</td>
+      <td>${element.state}</td>
+           </tr>`) ;
+     }).join("") ;
+  console.log("body2 "+body2) ;
+  $('#myprint').empty().html(body2) ; //fill print
+    //sendmailtocust(body2) ;
+    $('#attachedorder').empty().html(body2) ;
+    $('#tableattached').slideToggle() ;
+  },()=>{},content) ;
+}) ;
+$('#closeorder').on('click',(e:Event)=>{
+  $('#orderformbody').slideToggle() ;
+  CKEDITOR.instances.editor2.destroy()
+});
+$('#viewclose').on('click',(e:Event)=>{
+  $('#orderformbody').slideToggle() ;
+  CKEDITOR.instances.editor2.destroy()
+});
+$('#closeinvoice').on('click',(e:Event)=>{
+  $('#tableattached').slideToggle() ;
+})
+$(document).on("click","#redirectlogin",function(){
+  $('#exampleModal').modal('hide');//show modal
+  $('#exampleModal').remove() ;
+   });
+  $("#uploadremitted").on('click',(e:Event)=>{
+   // setajaxwithform() ;remittalform
+   Swal.fire({
+     icon: 'question',
+     text: 'Is this a remitted file?Continue if it is?',
+     showCancelButton: true
+   }).then((r: any) => {
+     if (r.isConfirmed) {
+      e.preventDefault();
+      e.stopPropagation();
+     // const content  = contenttypewithtoken(localStorage.getItem('token')) ; 
+      const content  = {
+        "Authorization": "Bearer " + localStorage.getItem("token")
+      } ;
+      const form   = new FormData(document.getElementById("remittalform") as HTMLFormElement) ; 
+      // var input = document.querySelector('input[type="file"]') as HTMLInputElement ;
+      // form.append('file',input.files[0]) ; 
+    // let form2 = JSON.stringify(Object.fromEntries(form.entries()));
+      //console.log('form ',form2) ;
+      setajaxwithform('text', `${backendurl}/transactions/submitremittalform`, 'post',form,(response:any)=>{
+        console.log('response',response) ;
+        toastr.success('Message sent successfully') ;
+      },()=>{},content);
+     }else{
+      toastr.error('cancelled') ;
+     }
+    });
+  }) ;
+  let socket = null;
+  let stompClient = null;
+  let usermap  =  new Map() ;
 const pageload = (url: string): void => {
   console.log(' url ', url);
   // alert(url) ;
@@ -1422,12 +1595,21 @@ const pageload = (url: string): void => {
   localStorage.setItem('ack', decoded.ack);
   localStorage.setItem('username', decoded.username);
   $('.mt-3').text(new String(localStorage.getItem('username')).toUpperCase());
-  subscribetoevent(new EventSource(`${backendurl}/subscribe`), 'latestNews');
-  subscribetoevent(new EventSource(`${backendurl}/eventbyuser?userid=${localStorage.getItem('ack')}`), 'usernews');
+  console.log('subscribing to event ....') ;
+  //subscribetoevent(new EventSource(`${backendurl}/subscribe`), 'latestNews');
+ // subscribetoevent(new EventSource(`${backendurl}/eventbyuser?userid=${localStorage.getItem('ack')}`), 'usernews');
   subscribetoevent(new EventSource(`${backendurl}/subscribe?vendorname=${localStorage.getItem('vendorname')}`),'vendornews');
   console.log("username2 ", localStorage.getItem('username'));
   const myname = (localStorage.getItem('username') as string).toUpperCase();
   console.log('before switch myname ',myname);
+  // translate('Ik spreek Engels', {to: 'ig'}).then((res) => {
+  //        console.log('right',res.text);
+  //        console.log(res.from.language.iso);   
+  //            }).catch((err) => {
+  //        console.error('error',err);
+  //      });
+  //console.log(translate) ;
+ //translateString("hello world of language","ig");
   switch (url) {
     case urlpages[0]: // for index page
       //alert('got here');
@@ -1435,7 +1617,7 @@ const pageload = (url: string): void => {
       invalidatetoken(tokenexp);
      // const myname = new String(localStorage.getItem('username')).toUpperCase();
       console.log('myname ',myname);
-      $('.alert').prepend(`<strong>Welcome &nbsp;&nbsp;${myname}me</strong>`);
+      $('.alert').prepend(`<strong>Welcome &nbsp;&nbsp;${myname}</strong>`);
       // document.querySelector("#thefooter")?.append(Headline()) ;  
       //for jsx testing which is working
       //subscribe to event for specific users
@@ -1531,6 +1713,78 @@ const pageload = (url: string): void => {
           }
         });
       break;
+    case `${loginurl}/transactions`:
+      datatable2= onloaddatatable2('#orderformbody','#trans',backendurl,[
+        {data: "orderid",defaultContent :""},
+       {data: "userid",defaultContent :""},
+      {data: "username",defaultContent :""},
+      {data: "date",defaultContent :""},
+       {data: "paymentstatus",defaultContent :""},
+     {data: "paymentmethod",defaultContent :""},
+       {data: "deliverystatus",defaultContent :""},
+       {data: "amount",defaultContent :""},
+       {data: "remitted",defaultContent :""},
+         ],`transactions/load?vendorname=${localStorage.getItem('vendorname')}`,datatable2,()=>{
+        CKEDITOR.replace('editor2');
+        CKEDITOR.instances['editor2'].setData('Type message to send to this user about this stock')
+      });
+    //   new $.fn.dataTable.Buttons(datatable2, {
+    //     buttons: [
+    //         'copy', 'excel', 'pdf'
+    //     ]
+    // } );
+     
+    // datatable2.buttons().container()
+    //     .appendTo( $('.col-sm-6:eq(0)', datatable2.table().container() ) );  
+      // $('#trans').dataTable({
+      //   select: {
+      //     selector: 'td:not(:first-child)',
+      //     style: 'os'
+      //   },
+      //   pageLength:20,
+      //   processing: true,
+      //   serverSide: false,
+      //   "ajax": {
+      //     type: 'GET',
+      //     url: `${backendurl}/transactions/load?vendorname=${localStorage.getItem('vendorname')}`,
+      //    // dataSrc:"",
+      //     headers: {
+      //       "Authorization":"Bearer " +(localStorage.getItem('token') as string).trim()
+      //     },
+      //   },
+      //   "columns": [{data: "orderid",defaultContent :""},
+      //     {data: "userid",defaultContent :""},
+      //    {data: "username",defaultContent :""},
+      //   {data: "date",defaultContent :""},
+      //   {data: "paymentstatus",defaultContent :""},
+      //  {data: "paymentmethod",defaultContent :""},
+      //  {data: "deliverystatus",defaultContent :""},{data: "amount",defaultContent :""},
+      //        ],
+      //   "order": [[1, 'asc']],
+      //   "sPaginationType": "full_numbers",
+      //   "autowidth":true,
+      //   "destroy": true
+      // });
+      break;
+   case `${loginurl}/order`:  
+  // onloaddatawithfetch(`${backendurl}/order/productordered?vendorname=${localStorage.getItem('vendorname')}`)  
+      datatable= onloaddatatable2('#orderformbody','#basic-1',backendurl,[{data:"id",defaultContent :""},
+        {data: "ordid",defaultContent :""},
+        {data: "paymentstatus",defaultContent :""},
+        {data: "paymentmethod",defaultContent :""},
+        {data: "ordstatus",defaultContent :""},
+        {data: "orderdate",defaultContent :""},
+        {data: "total",defaultContent :""},
+        {data: "firstname",defaultContent :""},{data: "country",defaultContent :""},
+        {data: "tax",defaultContent :""},
+        {data: "productname",defaultContent :""},
+        {data: "price",defaultContent :""},
+        {data: "state",defaultContent :""},],`order/productordered?vendorname=${localStorage.getItem('vendorname')}`,datatable,()=>{
+          CKEDITOR.replace('editor2');
+          CKEDITOR.instances['editor2'].setData('Type message to send to this user about this stock')
+        });
+        // $('.sidebar-menu').tree();
+        break;
     case urlpages[12]:   // for create  coupon
       $('#couponcategory').empty().html(
         processrequest2(`${backendurl}/categories/category`, 'get', {
@@ -1917,10 +2171,55 @@ const pageload = (url: string): void => {
     case `${loginurl}/messaging`:
       // $('#sizesofproduct').select2() ;
       // $('#colourofproduct').select2() ;
+      //cme here later 
+      subscribetoevent(new EventSource(`${backendurl}/subscribe?vendorname=${localStorage.getItem('vendorname')}`),'usernews');
       let selecttyperadio = Array.from(document.getElementsByName('selectype') as NodeListOf<HTMLInputElement>);
       // let [inp1,inp2,inp3,inp4]  =  selecttyperadio ;
       //console.log('checked ',inp1.checked);
       search(`usersearch`, selecttyperadio);
+      //chat logic 
+       socket = new SockJS(websocketurl);
+       stompClient = Stomp.over(socket);
+      stompClient.connect({},()=>{
+      stompClient.subscribe('/chatroom/public',onMessageReceived);
+      // get data from events before subscribing .
+    let eventSource  = new EventSource(`${backendurl}/subscribe?vendorname=${localStorage.getItem('vendorname')}`);
+    // receiverName=null;
+    eventSource.addEventListener('vendornews', (event:any) => {
+      if (event.data) {
+        console.log('from dispatch event ', event.data+' is the user id');
+       if(usermap.get('receiverName') ===undefined){
+            usermap.set('receiverName',event.data) ;
+            var chatMessage = {
+              senderName:localStorage.getItem('vendorname'),
+             // receiverName:usermap.get('receiverName')!==undefined?usermap.get('receiverName'):"",
+              message: "",
+              status:"JOIN"
+               };
+            stompClient.send("/app/message", {}, JSON.stringify(chatMessage));
+            stompClient.subscribe('/user/'+localStorage.getItem('vendorname')+'/private', onMessageReceived);
+            console.log(chatMessage,'usermap.get '+usermap.get('receiverName')) ;
+           }
+        eventSource.close();
+          }
+        });
+      },()=>{
+      console.log("unable to connect") ;   
+      });
+      $('#sendbtn').on('click',(e:any)=>{
+        e.preventDefault() ;
+        var chatMessage = {
+          senderName:localStorage.getItem('vendorname'),
+          receiverName:usermap.get('receiverName'),   // the user
+          message: $('#chatmsg').val(),
+          status:"MESSAGE"
+        };
+    $('#messagearea').append(`<br/><li style="color:blue"><strong>${$('#chatmsg').val()}</strong><br/></li>`) ;
+      console.log('details ',$('#chatmsg').val(),usermap) ;
+      $('#chatmsg').val('');
+  (document.getElementById('messagearea') as HTMLUListElement).scrollTop =  (document.getElementById('messagearea') as HTMLUListElement).scrollHeight;
+      stompClient.send("/app/private-message",{},JSON.stringify(chatMessage))
+      }) ;
       break;
     case `${loginurl}/messageview`:
          //alert() ;

@@ -88,9 +88,9 @@
                         <ul class="sidebar-submenu">
                             <li><a href="/translations" data-localize="sidebar.translations"><i class="fa fa-circle"></i>Translations</a></li>
                             <li><a href="/currencyrates" data-localize="sidebar.currency"><i class="fa fa-circle"></i>Currency Rates</a></li>
-                            <li><a href="/review" data-localize=""><i class="fa fa-circle"></i>Review</a></li>
-                             <li><a href="/customer" data-localize=""><i class="fa fa-circle"></i>Customers</a></li>
-                            <li><a href="/taxes" data-localize="sidebar.currency"><i class="fa fa-circle"></i>Taxes</a></li>
+                            <li><a href="/review" data-localize="sidebar.review"><i class="fa fa-circle"></i>Review</a></li>
+                             <li><a href="/customer" data-localize="sidebar.customers"><i class="fa fa-circle"></i>Customers</a></li>
+                            <li><a href="/taxes" data-localize="sidebar.taxes"><i class="fa fa-circle"></i>Taxes</a></li>
                         </ul>
                     </li>
                     <li><a class="sidebar-header" href="/reports"><i data-feather="bar-chart"></i><span data-localize="sidebar.reports">Reports</span></a></li>
@@ -99,12 +99,12 @@
                             <li><a href="/profile" data-localize="sidebar.profile"><i class="fa fa-circle"></i>Profile</a></li>
                         </ul>
                     </li>
-        <li><a class="sidebar-header" href="/invoice"><i data-feather="archive"></i><span data-localize="sidebar.invoice">Invoice</span></a>
+<!--        <li><a class="sidebar-header" href="/invoice"><i data-feather="archive"></i><span data-localize="sidebar.invoice">Invoice</span></a>-->
           <li><a class="sidebar-header" href="/messaging"><i data-feather="archive"></i><span data-localize="sidebar.message">Messaging</span></a>
                     </li>
-            <li><a class="sidebar-header" href="/messageview">
+<!--            <li><a class="sidebar-header" href="/messageview">
             <i data-feather="archive"></i><span data-localize="sidebar.viewmessage">View Message</span></a>
-                    </li>
+                    </li>-->
                     <li><a class="sidebar-header" href="/adminlogin"><i data-feather="log-in"></i><span data-localize="sidebar.login">Login</span></a>
                     </li>
                 </ul> 
