@@ -331,7 +331,7 @@ $('.language-dropdown').on('click', (e: any) => {
       $('[data-localize]').localize('../dist/mylanguages/mylanguage', { language: 'fr' });
       alertify.success("D'accord")
     }
-      , function () { alertify.error('Annuler') }).set('labels', { ok: 'Bien!', cancel: 'Naa!' });;
+  , function () { alertify.error('Annuler') }).set('labels', { ok: 'Bien!', cancel: 'Naa!' });;
   } else if (e.target.lastChild.data === 'German') {
     alert(e.target.lastChild.data);
   } else if (e.target.lastChild.data === 'Arabic') {
@@ -1621,6 +1621,9 @@ const pageload = (url: string): void => {
       // document.querySelector("#thefooter")?.append(Headline()) ;  
       //for jsx testing which is working
       //subscribe to event for specific users
+      (()=>{
+      //alert('stat') ;
+      })() //set up the statistical analysis
       break;
     case urlpages[urlpages.length - 2]:   //for  profile
       checktoken(localStorage.getItem('token'));

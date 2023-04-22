@@ -37,7 +37,7 @@
                             <h4>about</h4>
                         </div>
                         <div class="footer-contant">
-                            <div class="footer-logo"><img src="/assets/images/icon/crista_logo.png" alt=""></div>
+                            <div class="footer-logo"><img src="/assets/images/icon/jetlink_logobk31.png" alt=""></div>
                             <p>Crista Digital is a marketplace for Electronics, household and many other items.</p>
                             <div class="footer-social">
                                 <ul>

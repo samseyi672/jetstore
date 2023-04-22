@@ -1,0 +1,119 @@
+version: "3.3"
+services:
+  frontend-app:
+#    image: samseyi672/jetstore-jetstore:0.0.1-SNAPSHOT
+    #image: samseyi672/jetstore:0.0.1-SNAPSHOT
+    container_name: frontend-app
+    build: .
+#    command: bash -c "cd /app/jestore/target && java -jar jetstore-0.0.1-SNAPSHOT.jar"
+    restart: on-failure
+    ports:
+      - "1021:1021"
+    depends_on:
+      - mysqldb
+    environment:
+       SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/jetstoredb?autoReconnect=true&useSSL=false
+       SPRING_DATASOURCE_USERNAME: "root"
+       SPRING_DATASOURCE_PASSWORD: "root"
+       SPRING_APPLICATION_JSON: '{
+                     "initialization-mode": "always",
+                     "spring.datasource.driver-class-name": "com.mysql.cj.jdbc.Driver",
+                     "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
+                     "spring.jpa.hibernate.ddl-auto" : "update"
+                   }'
+    stdin_open: true
+    tty: true
+    links:
+      - mysqldb
+    networks:
+      - digitalis
+
+  mysqldb:
+    image: 'mysql:8.0'
+    restart: unless-stopped
+    ports:
+      - "3308:3306"
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: jetstoredb
+      MYSQL_ROOT_PASSWORD: root #the containers will see eachother bcos they are inside the same networks
+      MYSQL_PASSWORD: root
+    networks:
+      - digitalis
+  
+networks:
+  digitalis:
+#    name: digitalis
+#    driver: bridge
+
+volumes:
+  db:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

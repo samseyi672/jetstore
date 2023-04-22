@@ -25,6 +25,14 @@ import { itemcategorypage } from './categorypage';
 import { animateCSS, animateitems, animatePrdCat, processanimated, animateProductCategoryPage, animaterelatedprd } from "./animate";
 import { MyWebscoket } from "./websocket";
 let wsUri: string = "ws://" + "localhost:1022";
+ //let wsUri: string = "ws://" + "http://104.45.92.200:1022" ;
+
+//let wsUri: string = "ws://" + "http://localhost:1022" ;
+
+//let sockjsurl  = 'http://104.45.92.200:1023' ;
+
+let sockjsurl  = 'http://localhost:1023' ;
+
 toastr.options = {  // toast and notification
   "closeButton": true,
   "debug": false,
@@ -509,7 +517,7 @@ $('#createbilling').on('click', (e: any) => {
           throw new Error('option eror');
         }
         let form = JSON.parse($('#regform').jform());
-        console.log('userid ', localStorage.getItem('ack'), 'form', form);
+       // console.log('userid ', localStorage.getItem('ack'), 'form', form);
         if (!localStorage.getItem('ack')) {
           form = {};
           if ($.isEmptyObject(form)) {
@@ -521,10 +529,10 @@ $('#createbilling').on('click', (e: any) => {
         form.total = $('#total').text();
         // console.log('form', form);
         var tabledata = $('.qty').tableToJSON();
-        console.log(' table ', tabledata);//arrange and process for order 
+       // console.log(' table ', tabledata);//arrange and process for order 
         let orderarray = [];
         const mystore = JSON.parse(sessionStorage.getItem('store') as string); // get session store
-        console.log('mystore', mystore);
+        //console.log('mystore', mystore);
         for (let prd of tabledata) {
           //console.log('product ' , prd) ;
           const orderobj = {} as order;  //cast to order 
@@ -572,18 +580,19 @@ $('#createbilling').on('click', (e: any) => {
           "order": orderarray
         };
         setTimeout(() => {
-          console.log('totalorder', JSON.stringify(totalorder.order), 'total',parseFloat(form.total));
+          //console.log('totalorder', JSON.stringify(totalorder.order), 'total',parseFloat(form.total));
+          console.log('total',parseFloat(form.total));
           let content = contenttypewithtoken(localStorage.getItem('customertoken'));
           setajax('json', `${backendurl}/order/saveorder`, 'post', JSON.stringify(totalorder.order), (response: any) => {
             // process the response
-            console.log('response and dispatch event ', response);
-            console.log('localstorage ',localStorage);
+           // console.log('response and dispatch event ', response);
+          //  console.log('localstorage ',localStorage);
             // send the event 
             let uriencode  = encodeURIComponent(`[${localStorage.getItem('vendorname')}]`) ;
            // let datarray   = new Array(${localStorage.getItem('vendorname')}) ;
             setajax('',`${backendurl}/dispatchEvent?vendorname=${uriencode}&freshNews=${localStorage.getItem('username')}`,'get',"", (response: any) => {
               // process the response
-              console.log('response ', response); 
+             // console.log('response ', response); 
           // subscribetoevent(new EventSource(`${backendurl}/subscribe?vendorname=${localStorage.getItem('vendorname')}&freshNews='This is me'`),'vendornews');
             }, () => {}, content);
            makePayment(JSON.stringify(totalorder), generateId(),parseFloat(form.total), "Pls Fill in your Card Info", `${backendurl}/jetstore/crista-digital.jpg`, "JTL Platform", "");
@@ -1035,7 +1044,14 @@ $('#payment-2').on('click', (e: any) => {
 // });
 //make payment 
 function makePayment(itemsbought: string, txref: string, amount: number, description: string, imagelink: string, title: string, custdata: string) {
-   console.log(itemsbought,txref,amount,description,imagelink,title,custdata) ;
+   console.log('itemsbought ',JSON.parse(itemsbought),' txref ',txref) ;
+   console.log('amount ',amount) ;
+   console.log('description ',description) ;
+   console.log('imagelink ',imagelink) ;
+   console.log('title ',title) ;
+   console.log('custdata ',custdata) ;
+   let items =JSON.parse(itemsbought) ;
+   console.log('items ',parseInt(items.order[0].overalltotal.substring(1).replace(/,/g, ""))) ;
   //validate the form 
   let form = JSON.parse($('#regform').jform());
   console.log(' form ', form, form.firstname);
@@ -1076,10 +1092,10 @@ function makePayment(itemsbought: string, txref: string, amount: number, descrip
     return;
   }
   //console.log('itemsbought',itemsbought);
-  FlutterwaveCheckout({
-    public_key: "FLWPUBK_TEST-SANDBOXDEMOKEY-X",
+  const modal  = FlutterwaveCheckout({
+    public_key: "FLWPUBK_TEST-739dbfa5df97cb97b1cfe74e51c4eb7e-X",
     tx_ref: txref,
-    amount: amount,
+    amount: parseInt(items.order[0].overalltotal.substring(1).replace(/,/g, "")),
     currency: "NGN",
     payment_options: "card,ussd",
     callback: function (payment: any) {
@@ -1088,16 +1104,18 @@ function makePayment(itemsbought: string, txref: string, amount: number, descrip
       verifyTransactionOnBackend(payment, itemsbought);
     },
     onclose: function (incomplete: any) {
-      if (incomplete || window.verified === false) {
-        (document.querySelector("#payment-failed") as HTMLInputElement).style.display = 'block';
-      } else {
-        (document.querySelector("form") as HTMLFormElement).style.display = 'none';
-        if (window.verified === true) {
-          (document.querySelector("#payment-success") as HTMLInputElement).style.display = 'block';
-        } else {
-          (document.querySelector("#payment-pending") as HTMLInputElement).style.display = 'block';
-        }
-      }
+      console.log('modal object under close ',modal,' complete ',incomplete);
+     // modal.close() ;
+      // if (incomplete || window.verified === false) {
+      //   (document.querySelector("#payment-failed") as HTMLInputElement).style.display = 'block';
+      // } else {
+      //   (document.querySelector("form") as HTMLFormElement).style.display = 'none';
+      //   if (window.verified === true) {
+      //     (document.querySelector("#payment-success") as HTMLInputElement).style.display = 'block';
+      //   } else {
+      //     (document.querySelector("#payment-pending") as HTMLInputElement).style.display = 'block';
+      //   }
+      // }
     },
     customer: {
       email: form.email,
@@ -1110,6 +1128,7 @@ function makePayment(itemsbought: string, txref: string, amount: number, descrip
       logo: imagelink
     }
   });
+  console.log('modal object ',modal);
 }
 //genrate randon random  ids 
 function uid() {
@@ -1128,6 +1147,7 @@ function verifyTransactionOnBackend(transactionId: string, itemsbought: string) 
     window.verified = true;
     const content = contenttypewithtoken(localStorage.getItem('customertoken'));
     setajax('json', `${backendurl}/order/create`, 'post', itemsbought, (r: any) => {
+      console.log('r ',r) ;
       // process the response
       //  makePayment(itemsbought:JSON,txref:string,amount:string,description:string,imagelink:string,title:string,custdata:string) 
     }, () => {
@@ -1277,7 +1297,7 @@ const pagesonload = (url: string) => {
         // webSocket.onerror = function (evt:any) {
         //   console.log('onerror ', evt.data);
         // };
-        socket = new SockJS('http://localhost:1023/ws');
+        socket = new SockJS(`${sockjsurl}/ws`);
         stompClient = Stomp.over(socket);
        stompClient.connect({},()=>{
         stompClient.subscribe('/chatroom/public',onMessageReceived);
@@ -1493,16 +1513,19 @@ const pagesonload = (url: string) => {
       break;
     case `${loginurl}/jetcart/cart`:
       invalidateSessionAndToken(jwt_decode, 'customertoken');
+     // sessionStorage.clear() ;
       if (localStorage.getItem('customertoken') !== null) {
         const store = JSON.parse(sessionStorage.getItem('store') as string);
-       //  console.log('store ', store);
+         console.log('cart store ', store);
         if (store === null || store.includes(null)) {
+          alert('session null');
           let content = contenttypewithtoken(localStorage.getItem('customertoken'));
           //console.log('content ', content, `${backendurl}/product/loadcartlist/${localStorage.getItem('ack')}`);
           //alert(localStorage.getItem('ack')) ;
           setajax('text', `${backendurl}/product/loadcartlist/${localStorage.getItem('ack')}`, 'get', '', (store: any) => {
             // process the response
             console.log('loaded response ', store);
+            //alert('response ..');
             if(store!== undefined){
             if (store.length === 0) {
               toastr.error('Your cart is empty');
@@ -1510,8 +1533,10 @@ const pagesonload = (url: string) => {
             }
             console.log('typeof ', typeof store);
             store = JSON.parse(store);
+            //alert() ;
             const totalbody = store.map((elem: any) => {
-              console.log('element ',elem);
+              //alert('elem') ;
+              console.log('element2 ',elem);
               //processing each object in cart 
               return `
                      <tbody>
@@ -1759,41 +1784,6 @@ const pagesonload = (url: string) => {
             }
             let image = `${backendurl}/jetstore/${p.imageurl}`;
             marketplace(strbuildr, p);
-            // strbuildr.append(`<div class="col-md-3">
-            //          <div class="product-box">
-            //            <div class="img-wrapper">
-            //            <div class="lable-block"><span class="lable3">${p.productstatus}</span>
-            //            <span class="lable4">on
-            //           sale</span></div>
-            //            <div class="lable-block"><span class="lable3">
-            //            ${p.productstatus}</span> <span class="lable4">on
-            //            sale</span>
-            //            </div>
-            //  <a href="/jetcart/productpage" onclick="loadprd('${p.id}','/jetcart/productpage')">
-            //  <img src="${image}" width="180px" height="180px" alt=""></a>                                      
-            //       <div class="cart-info cart-wrap">
-            //   <button data-toggle="modal" onclick="addtocart(${p.id})" title="Add to cart">
-            //   <i class="ti-shopping-cart"></i></button> 
-            //   <a href="javascript:void(0)" onclick="addtowishlist('${p.id}')" title="Add to Wishlist">
-            //   <i class="ti-heart" aria-hidden="true"></i></a>
-            //    <a href="#" data-toggle="modal"
-            //     data-target="#quick-view" title="Quick View">
-            //     <i class="ti-search" aria-hidden="true"></i>
-            //     </a>
-            //     <a href="/jetcart/compare?name=${encodeURIComponent(p.productname)}$price=${p.productprice}" title="Compare">
-            //     <i class="ti-reload" aria-hidden="true"></i></a>
-            //     </div></div>
-            //                    <div class="product-detail">
-            //                     <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
-            //                     </div>
-            //                     <a href="/jetcart/productpageappliance">
-            //                     <h6>${p.productname}</h6>
-            //                     </a>
-            //                     <h4>N${(parseFloat(p.productprice).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'))}</h4>
-            //                 </div>
-            //                 </div>
-            //  </div>`);
-            // console.log('inner loop got here ') ; 
           }
           // console.log('got here ') ;
           strbuildr.append(`</div>`);
@@ -1801,6 +1791,7 @@ const pagesonload = (url: string) => {
         }
         // console.log(prdcatalogue.toString()) ;
         //alert('appending ...');
+         //alert('market') ;
         $('#catalogue').empty().html(prdcatalogue.toString());
         // $(prdcatalogue.toString()).insertAfter('#catalogue') ; 
       });
@@ -1810,7 +1801,7 @@ const pagesonload = (url: string) => {
         animateCSS('.catalogue', 'fadeOutRightBig', () => {
           animateitems(backendurl, '.catalogue', 'fadeOutRightBig', catalogue, 'get', `${backendurl}/product/loadproduct`)
         });
-      }, 2000);
+      },3000);
       break;
     case `${loginurl}/jetcart/productbycategory`:
       //alert(url) ;
@@ -2387,7 +2378,7 @@ const marketplace = (strbuildr: any, p: any) => {
                        ${p.productstatus}</span> <span class="lable4">on
                        sale</span>
                        </div>
-             <a href="/jetcart/productpage" onclick="loadprd('${p.id}','/jetcart/productpage')">
+             <a href="javascript:void(0)" onclick="loadprd('${p.id}','/jetcart/productpage')">
              <img src="${image}" class='animate__animated animate__bounce' width="180px" height="180px" alt=""></a>                                      
                   <div class="cart-info cart-wrap">
               <button data-toggle="modal" onclick="addtocart(${p.id})" title="Add to cart">

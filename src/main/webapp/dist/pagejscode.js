@@ -1,7 +1,11 @@
 //import {backendurl} from './ts_scripts/url'
 const url = 'http://localhost:1022';
-//const url  =     'https://cristabackend.herokuapp.com';
+//const url  =     'http://104.45.92.200:1022';
 const api = 'http://localhost:1022';
+
+//const api='http://104.45.92.200:1022' ;
+
+
 
 // requirejs(["/node_modules/@asmagin/google-translate-api/index.js"], function (translate) {
 //   translate('Ik spreek Engels', {to: 'ig'}).then((res) => {
@@ -133,25 +137,28 @@ const removeRow = (id) => {
           console.log('totalprice ',totalprice) ;
           totalprice  = v.replace(totalprice,',','');
           console.log('totalprice2 ',totalprice) ;
+          console.log(document.getElementById(id)) ;
+          console.log('parentNode ',document.getElementById(id).parentNode) ;
+          console.log("outerHTML ",document.getElementById(id).parentNode.outerHTML) ;
           let htdoc  = parser.parseFromString(document.getElementById(id).parentNode.outerHTML,'text/html');
           let priceh2   = Array.from(htdoc.getElementsByTagName('h2')) ;
-          console.log(priceh2.length, priceh2) ;
-          console.log('td',priceh2.length,priceh2[priceh2.length-1].outerHTML) ;
+         // console.log(priceh2.length, priceh2) ;
+         // console.log('td',priceh2.length,priceh2[priceh2.length-1].outerHTML) ;
           price  = v.substr(priceh2[priceh2.length-1].outerHTML,20,25);
           console.log('price',price) ;
           price =  v.substr(price,2,16);
           console.log('price2 ',price) ;
           price  = v.slice(price,0,8) ;
-          console.log('price3 ',price) ;
+         // console.log('price3 ',price) ;
           price  = v.replace(price,',','') ;
-          console.log('price2 ',price) ;
+         // console.log('price2 ',price) ;
           //price=v.substr(price,1) ;
         //  $('#'+id).closest("tr").remove();
           console.log(totalprice,' and ',price) ;
           let lengthofrows =$('#producttable').children.length;
           console.log('first lengthofrows ',lengthofrows) ;
           document.getElementById(id).parentNode.remove() ;
-          console.log('ack ',localStorage.getItem('ack')) ;
+         // console.log('ack ',localStorage.getItem('ack')) ;
           let content  = contenttypewithtoken(localStorage.getItem('customertoken')) ;
           setajax('text',`${url}/product/delproductfromcartlist/${id}/${localStorage.getItem('ack')}`,'get',"",(response)=>{
             console.log('response ',response);
@@ -245,7 +252,8 @@ const removeRow = (id) => {
                               <tr>
                                 <td>Total Price:</td>
                                 <td>
-                                  <h2>N${((parseFloat(totalprice)-parseFloat(price)).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'))}</h2>
+                                  <h2>N${parseFloat(totalprice)-parseFloat(price)>0?((parseFloat(totalprice)-parseFloat(price)).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')):
+                                      ((parseFloat(price)-parseFloat(totalprice)).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'))}</h2>
                                 </td>
                               </tr>
                             </tbody>
@@ -270,6 +278,7 @@ const removeRow = (id) => {
          //alert('got here ') ;
          //console.log(header+totalbody.join("")+'</table>'+totalp) ;
     $('#customercart').empty().html(header+totalbody.join("")+'</table>'+totalp);
+    window.location.reload() ;
  //console.log('parentNode ',document.getElementById(id).parentNode,typeof document.getElementById(id).parentNode) ;
   // console.log(htmlDoc.getElementsByTagName('h2')) ;
   // console.log('textContent ',h2[4],v.substr(h2[4].outerHTML,4,10)) ;
@@ -294,7 +303,7 @@ const removeRow = (id) => {
     // );
      // }
     //  alert('out') ;
-    console.log('differences ',parseFloat(totalprice)-parseFloat(price)) ;
+    console.log('differences ',`${(parseFloat(totalprice)-parseFloat(price))>0?parseFloat(totalprice)-parseFloat(price):parseFloat(totalprice)-parseFloat(price)}`) ;
       // $('#totalpr').empty().html(`
       // <table className="table cart-table table-responsive-md" id='totalpr'>
       //                         <tbody>
@@ -619,8 +628,9 @@ const loadprd2 = (id, path) => {
 
 const loadprd = (id, path) => {
   requestdata('/jetcart/productpage', `${url}/product/display/${id}`, (res) => {
-    console.log(' id ', id);
-    console.log('res', res);
+   // console.log(' id ', id);
+   // console.log('res', res);
+   // alert("seen "+id+" "+JSON.stringify(res)) ;
     sessionStorage.setItem('product', JSON.stringify(res));
   }, {
     method: 'get',
@@ -630,6 +640,7 @@ const loadprd = (id, path) => {
     },
   });
 };
+
 const updateprofile = (formid) => {
   const form = new FormData(document.getElementById(formid));
   console.log(form, form.get("location"), ' ack ', localStorage.getItem('ack'));
@@ -829,9 +840,11 @@ const requestdata = async (path, url, callback, body) => {
     }
     return response.json();
   }).then(r => {
+   // alert('calling callback');
     callback(r);
     window.location.href = path;
   });
+ // console.log() ;
 };
 // version 2
 const helpaddtocart2 = async (url, callback, body) => {

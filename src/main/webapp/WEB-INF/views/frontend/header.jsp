@@ -180,7 +180,7 @@
 						</div>
 						<div class="brand-logo">
 							<a href="/jetcart/index"><img
-								src="/assets/images/icon/crista_logo.png"
+								src="/assets/images/icon/jetlink_logobk31.png"
 								class="img-fluid blur-up lazyload" alt=""></a>
 						</div>
 					</div>

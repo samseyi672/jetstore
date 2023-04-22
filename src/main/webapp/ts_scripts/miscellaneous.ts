@@ -36,8 +36,8 @@ declare var $: any;
      }
      }
    }else{
-    alert('pls login to access') ;
-    window.location.href='./index' ;
+    alert('Your cart is empty.pls login to access') ;
+   // window.location.href='./index' ;
    } 
 }
 

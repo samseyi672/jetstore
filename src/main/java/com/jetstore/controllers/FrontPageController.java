@@ -1,23 +1,28 @@
 package com.jetstore.controllers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import config.RequestInterceptor;
+
 @Controller
 @RequestMapping("/jetcart")
 public class FrontPageController {
+	private static Logger logger =  LoggerFactory.getLogger(FrontPageController.class)  ;
 	@ResponseBody
 	@GetMapping("/test")
 	public String test() {
-		System.out.println("calling  index");
+		logger.info("calling  index");
 		return "see me";
 	}
 
 	@GetMapping("/index")
 	public String index() {
-		System.out.println("calling  index");
+		logger.info("calling index page");
 		return "frontend/index";
 	}
 

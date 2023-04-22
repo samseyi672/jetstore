@@ -164,7 +164,7 @@ export function animateitems(backendurl: string, element: string, animationtype:
                        <div class="lable-block"><span class="lable3">${p.productstatus}</span> 
                        <span class="lable4">on
                        sale</span></div>
-             <a href="/jetcart/productpage" onclick="loadprd('${p.id}','/jetcart/productpage')">>
+             <a href="javascript:void(0)" onclick="loadprd('${p.id}','/jetcart/productpage')">>
              <img src="${image}" width="180px" height="180px" alt=""></a>                                      
                   <div class="cart-info cart-wrap">
               <button data-toggle="modal" onclick="addtocart('${p.id}')" title="Add to cart">
@@ -206,7 +206,7 @@ export function animateitems(backendurl: string, element: string, animationtype:
          animateCSS(element, animationtype, ()=>{
           animateitems(backendurl, element, animationtype, domdivelement, methodtype, url)
        });  //recursion 
-       }, 2000);
+       }, 3000);
 
     }
   });
